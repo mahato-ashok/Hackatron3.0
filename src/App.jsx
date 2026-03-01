@@ -35,6 +35,7 @@ function App() {
       <LandingPage />
       <About />
       <Wihts />
+      <Schedule />
       <Hackatron2 />
       <Venue />
       <Prizes />
