@@ -4,7 +4,7 @@ import HomeMascot1 from "/images/HomeMascot.gif";
 import DevfolioBtn from "/images/DevfolioBtn.svg";
 import DevfolioLogo from "../assets/images/LandingPage/DevfolioLogo.svg";
 import TimerSection from "./TimerSection";
-import Schedule from "../components/Schedule/Schedule";
+//import Schedule from "../components/Schedule/Schedule";
 import ScrollButton from "../assets/images/LandingPage/ScrollButton.svg";
 import './LandingPage.css';
 
@@ -143,8 +143,8 @@ function LandingPage() {
 
 
         {/* Schedule section */}
-        <section id="schedule" className="max-[768px]:pt-[10px] pt-[60px] "></section>
-        <Schedule />
+        {/* <section id="schedule" className="max-[768px]:pt-[10px] pt-[60px] "></section>
+        <Schedule /> */}
       </div>
     </>
   );
