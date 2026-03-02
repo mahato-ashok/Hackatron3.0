@@ -50,3 +50,14 @@ body {
     font-family: 'vt323';
     background: linear-gradient(to bottom, #040842, #040842);
   } */
+ html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+@media (max-width: 540px) {
+  html {
+    scroll-padding-top: 60px;
+  }
+}
+

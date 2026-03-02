@@ -62,7 +62,7 @@ hackatron2-container {
   object-fit: cover;
   width: 70%;
   filter: saturate(1.5) brightness(1.1) contrast(1.1) hue-rotate(10deg); 
-  border: 3.5px dashed #00FF00;
+  border: 3.5px dashed #7f7cff;
   transition: all 0.3s ease;
 }
 
@@ -126,7 +126,7 @@ hackatron2-container {
   object-fit: cover;
   filter: saturate(1.5) brightness(1.1) contrast(1.1) hue-rotate(10deg); 
   
-  border: 3.5px dashed #00FF00;
+  border: 3.5px dashed #7f7cff;
   transition: all 0.3s ease;
 }
 
@@ -151,7 +151,7 @@ hackatron2-container {
   border-radius: 0 px;
   object-fit: cover;
   filter: saturate(1.5) brightness(1.1) contrast(1.1) hue-rotate(10deg); 
-  border: 3.5px dashed #00FF00;
+  border: 3.5px dashed #7f7cff;
   transition: all 0.3s ease;
 }
 
@@ -351,21 +351,21 @@ hackatron2-container {
   .image-container>img {
     height: 100px;
     border-radius: 0px;
-    border: 2px dashed #D99518;
+    border: 2px dashed #7f7cff;
     gap: 1.5rem;
   }
 
   .right-container>img {
     height: 180px;
     border-radius: 0px;
-    border: 2px dashed #D99518;
+    border: 2px dashed #7f7cff;
     gap: 1.5rem;
   }
 
   .bottom-container>img {
     height: 70px;
     border-radius: 0px;
-    border: 2px dashed #D99518;
+    border: 2px dashed #7f7cff;
     gap: 1.5rem;
   }
 }
