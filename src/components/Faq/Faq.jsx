@@ -88,7 +88,7 @@ export default function Faq() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-400 underline hover:text-blue-300"
-                    href="#"
+                    href="https://hackatron3.devfolio.co/"
                   >
                     Devfolio
                   </a>
