@@ -76,7 +76,7 @@ export default function Navbar() {
                 {/* Pixelated Logo Effect */}
                 <a href="/#hero" >
                     <img
-                        className="justify-start w-14 h-14 max-md:w-10 max-md:h-10 3xl:w-[300px] 3xl:h-[300px] pixel-art"
+                        className="justify-start w-10 h-10 max-md:w-8 max-md:h-8 max-[540px]:w-7 max-[540px]:h-7 3xl:w-[150px] 3xl:h-[150px] pixel-art"
                         src={sc1_logo}
                         alt="Hackatron Logo"
                     />
@@ -103,8 +103,8 @@ export default function Navbar() {
                     ))}
                 </ul>
 
-                <div className="flex gap-4 items-center">
-                    <a href="https://www.bitsindri.ac.in/" target="_blank" rel="noopener noreferrer">
+                <div className="flex gap-4 max-md:gap-2 items-center">
+                    <a href="https://www.bitsindri.ac.in/" target="_blank">
 
                         <img className="w-12 h-12 max-md:w-8 max-md:h-8 rendering-pixelated" src={bitlogo} alt="BIT Sindri Logo" />
                     </a>

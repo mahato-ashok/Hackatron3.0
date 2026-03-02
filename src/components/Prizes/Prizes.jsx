@@ -99,7 +99,7 @@ const Prizes = () => {
                         {/* Two Thin Rectangles Below */}
                         <div className="flex flex-col w-full gap-2">
                             <div className="flex-1 mb-4 flex flex-col transition-all duration-300">
-                                <div className='text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl'>:/Check out our <a className='text-gray-400 hover:text-white' href='add prize link'>devfolio page</a> for the detailed track prize details.</div>
+                                <div className='text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl'>:/Check out our <a className='text-gray-400 hover:text-white' href='https://hackatron3.devfolio.co/'>devfolio page</a> for the detailed track prize details.</div>
                             </div>
                         </div>
 

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import spriteSheet from '../../assets/images/scrollbar_sprites.png';
 
 const CustomScrollbar = () => {
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
     const [scrollPercentage, setScrollPercentage] = useState(0);
     const [activeSection, setActiveSection] = useState('hero');
 
@@ -25,6 +26,8 @@ const CustomScrollbar = () => {
         { id: 'footer', bgPos: '100% 100%' },   // Envelope
         { id: 'upfooter', bgPos: '100% 100%' }  // Envelope
     ];
+
+    //Comment
 
     useEffect(() => {
         let rafId;
@@ -126,15 +129,23 @@ const CustomScrollbar = () => {
         document.body.style.cursor = '';
     };
 
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 1024);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    if (isMobile) return null;
+
     return (
         <div style={{
             position: 'fixed',
-            top: '100px', // Offset from top
+            top: '80px', // Offset from top
             right: 0,
-            width: '6px', // Ultra slim for elegance
-            height: 'calc(100vh - 100px)', // Adjusted height
-            backgroundColor: '#020420', // Deep dark blue
-            borderLeft: '1px solid #1a1a3e', // Subtler border
+            width: '12px', // Slightly wider for easier grab
+            height: 'calc(100vh - 80px)',
+            backgroundColor: 'rgba(2, 4, 32, 0.5)', // Semi-transparent
+            borderLeft: '1px solid rgba(57, 255, 20, 0.1)', // Matches project theme color
             zIndex: 9999
         }}>
             {/* The Track Pattern */}

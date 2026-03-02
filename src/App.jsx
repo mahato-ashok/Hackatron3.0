@@ -26,7 +26,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   return (
     <>
-     {loading && <Preloader onComplete={() => setLoading(false)} />}
+      {loading && <Preloader onComplete={() => setLoading(false)} />}
       <div className={`transition-opacity duration-700 ${loading ? 'opacity-0 h-0 overflow-hidden' : 'opacity-100'}`}></div>
       <CustomScrollbar />
       <FallingLeaves />

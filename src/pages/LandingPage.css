@@ -1,15 +1,157 @@
-/*@keyframes animatedBackground {
-    0% {
-        background-position: 50% 0;
-    }
-    50% {
-        background-position: 50% 13%;
-    }
-    100% {
-        background-position: 50% 0;
+/* ===================== HEAD/LOGO ===================== */
+.head-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.imgHead-background {
+    width: 85%;
+    max-width: 860px;
+    height: auto;
+    object-fit: contain;
+    margin-top: 2%;
+    margin-bottom: 0;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
+@media (max-width: 640px) {
+    .imgHead-background {
+        width: 95%;
     }
 }
 
-.home-mascot {
-    animation: animatedBackground 5s ease-in-out infinite;
-}*/
+/* ===================== HERO LAYOUT ===================== */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 0;
+}
+
+/* ===================== MASCOT ===================== */
+.home-mascot-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.home-mascot-img {
+    /* Full width on mobile, constrained on desktop */
+    width: 160px;
+    height: auto;
+    object-fit: contain;
+    pointer-events: none;
+    user-select: none;
+}
+
+@media (min-width: 640px) {
+    .home-mascot-img {
+        width: 200px;
+    }
+}
+
+@media (min-width: 768px) {
+    .home-mascot-img {
+        width: 220px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .home-mascot-img {
+        width: 260px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .home-mascot-img {
+        width: 300px;
+    }
+}
+
+@media (min-width: 2560px) {
+    .home-mascot-img {
+        width: 440px;
+    }
+}
+
+/* ===================== APPLY BUTTON ===================== */
+.devfolio-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 24px;
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    background-color: #F0C36D;
+    color: black;
+    border: 3px solid black;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 1);
+    transition: all 0.15s ease;
+    cursor: pointer;
+    white-space: nowrap;
+    margin: 0 0 12px 0;
+}
+
+.devfolio-btn:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 1);
+}
+
+.devfolio-btn:active {
+    transform: translate(5px, 5px);
+    box-shadow: none;
+}
+
+.devfolio-btn img {
+    width: 24px;
+    height: auto;
+}
+
+@media (min-width: 640px) {
+    .devfolio-btn {
+        font-size: 1.5rem;
+        padding: 10px 28px;
+        gap: 12px;
+    }
+
+    .devfolio-btn img {
+        width: 28px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .devfolio-btn {
+        font-size: 1.8rem;
+        padding: 12px 36px;
+    }
+
+    .devfolio-btn img {
+        width: 32px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .devfolio-btn {
+        font-size: 2.2rem;
+        padding: 12px 40px;
+    }
+}
+
+@media (min-width: 2560px) {
+    .devfolio-btn {
+        font-size: 3rem;
+        padding: 16px 52px;
+        border: 4px solid black;
+        box-shadow: 7px 7px 0px rgba(0, 0, 0, 1);
+    }
+
+    .devfolio-btn img {
+        width: 50px;
+    }
+}

@@ -1,39 +1,106 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
-.main-footer{
+.main-footer {
     font-family: 'VT323', monospace;
-    height: 100%;
-}
-
-/* .upfooter {
-    background-color: #040842;
-    border: 2px solid yellow;
-} */
-
-.address,
-.resources,
-.social {
-    z-index: 10;
+    width: 100%;
 }
 
 .footer-container {
     position: relative;
     width: 100%;
+    /* Let the container size to the image on large screens, but enforce min-height on mobile */
+    min-height: 220px;
 }
 
+/* Background image fills horizontally, crops on small screens */
 .img-background {
     width: 100%;
-    height: auto;
-    max-height: 400px;
+    height: 100%;
+    min-height: 220px;
     object-fit: cover;
+    /* Crop from center - shows the interesting middle of the footer image */
+    object-position: center center;
+    display: block;
+}
+
+/* On mobile, show only the top portion of the footer background (sky/top of image) */
+@media (max-width: 767px) {
+    .img-background {
+        object-position: center top;
+        min-height: 320px;
+    }
+
+    .footer-container {
+        min-height: 320px;
+    }
+}
+
+@media (max-width: 480px) {
+    .img-background {
+        min-height: 420px;
+    }
+
+    .footer-container {
+        min-height: 420px;
+    }
+}
+
+/* Column layout */
+.address,
+.resources,
+.social {
+    z-index: 10;
+    width: 100%;
+}
+
+/* Footer section headings */
+.footerheading {
+    font-size: 1.4rem;
+}
+
+@media (min-width: 480px) {
+    .footerheading {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .footerheading {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .footerheading {
+        font-size: 2.25rem;
+    }
+}
+
+/* Footer content text */
+.footercontent {
+    font-size: 1.15rem;
+}
+
+@media (min-width: 480px) {
+    .footercontent {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .footercontent {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .footercontent {
+        font-size: 1.7rem;
+    }
 }
 
 .text-bottom-footer {
     color: #FFFFFF;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
     text-align: center;
     z-index: 999;
 }

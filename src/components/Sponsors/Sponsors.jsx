@@ -86,7 +86,7 @@ const Sponsors = () => {
                     {/*
                     <div className='flex flex-wrap max-sm:flex-col items-center justify-center gap-5 sm:gap-20 max-sm:mb-0'>
                         <Link to='https://www.avax.network/'><img src={avalancheLogo} alt="Avalanche" width={1000} height={1000} className='w-[50vw] sm:w-[30vw] 3xl:w-[20rem] 3xl:h-[4rem]' /></Link>
-                        <Link to='https://devfolio.co/'><img src={devfolioLogo} alt="Devfolio" width={1000} height={1000} className='w-[40vw] sm:w-[20vw] 3xl:w-[20rem]' /></Link>
+                        <Link to='https://hackatron3.devfolio.co/'><img src={devfolioLogo} alt="Devfolio" width={1000} height={1000} className='w-[40vw] sm:w-[20vw] 3xl:w-[20rem]' /></Link>
                     </div>
                     */}
                 </div>
