@@ -28,6 +28,17 @@ function LandingPage() {
     };
   }, []);
 
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://apply.devfolio.co/v2/sdk.js";
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   const scrollToTimer = () => {
     const scheduleSection = document.getElementById("timer");
     if (scheduleSection) {
@@ -69,13 +80,20 @@ function LandingPage() {
             </div>
 
             {/* Apply button */}
-            <button
+            {/* <button
               className="devfolio-btn -mt-7"
               onClick={() => window.open("https://hackatron3.devfolio.co/")}
             >
               <img src={DevfolioLogo} alt="Devfolio Logo" />
               <span>Apply with Devfolio</span>
-            </button>
+            </button> */}
+
+            <div
+              className="apply-button  mt-4 mb-4"
+              data-hackathon-slug="hackatron3"
+              data-button-theme="dark-inverted"
+              style={{ height: "44px", width: "312px" }}
+            ></div>
 
             {/* Description */}
             <p className="font-vt323 text-[#D8C39A] text-[18px] sm:text-[20px] md:text-[22px] xl:text-[24px] 2xl:text-[2.8vh] w-[95%] md:w-[90%] lg:w-[85%] xl:w-[80%] 2xl:w-[75%] leading-snug text-center mt-0 mx-3 mb-3">
