@@ -69,7 +69,7 @@ function Schedule() {
             <div
                 id="schedule"
                 name="schedule"
-                className="w-full py-10 bg-transparent font-vt323 bg-no-repeat"
+                className="w-full py-10 bg-transparent font-vt323 bg-no-repeat "
                 style={{
                     // backgroundImage: `url('/src/assets/images/discord/stars.svg')`,
                     // backgroundPosition: `${50 + bgPosition.x}% ${50 + bgPosition.y}%`,

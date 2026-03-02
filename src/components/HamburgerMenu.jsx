@@ -18,7 +18,7 @@ export default function SwipeableTemporaryDrawer() {
   };
 
   return (
-    <div className="min-[768px]:hidden">
+    <div className="min-[768px]:hidden mt-3">
       {/* HAMBURGER BUTTON */}
       <button
         onClick={() => setOpen(true)}
