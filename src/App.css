@@ -6,13 +6,24 @@ html {
 body {
   margin: 0;
   padding: 0;
-  /* Your Background Image lives here now */
+  /* Background moved to App.jsx fixed-bg div for mobile stability */
+  background-color: transparent !important;
+}
+
+.fixed-bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/bg.png');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Keeps image still while scrolling */
-  background-color: #080c0a; /* Fallback color */
+  z-index: -100;
+  /* Behind everything */
+  pointer-events: none;
+  background-color: #080c0a;
 }
+
 
 /* Ensure the root React div doesn't block the view */
 #root {

@@ -1,51 +1,53 @@
 import './App.css'
-import { useState } from 'react'
-import Footer from './components/Footer/Footer'
-import Discord from './components/Discord/Discord'
-import Schedule from './components/Schedule/Schedule'
-import TimerSection from './pages/TimerSection'
+import React, { useState, Suspense, lazy } from 'react'
 import Navbar from './components/Navbar'
-import Tracks from './components/Tracks/Tracks'
-import Sponsors from './components/Sponsors/Sponsors'
-import About from './components/AboutUs/About'
-import Wihts from './components/Wihts/Wihts'
-import PastSponsors from './components/Sponsors/PastSponsors'
-import Faq from './components/Faq/Faq'
-import Cp from './components/Cp/Cp'
-import Venue from './components/Venue/Venue'
 import CustomScrollbar from './components/CustomScrollbar/CustomScrollbar';
-// import CursorFollower from './components/CursorFollower';
 import FallingLeaves from './components/FallingLeaves';
-
 import Preloader from './components/Preloader/Preloader'
+import Reveal from './components/Reveal'
 
-import LandingPage from './pages/LandingPage'
-import Hackatron2 from './components/Hackatron2/Hackatron2'
-import Prizes from './components/Prizes/Prizes'
+// Lazy loaded components
+const LandingPage = lazy(() => import('./pages/LandingPage'));
+const About = lazy(() => import('./components/AboutUs/About'));
+const Wihts = lazy(() => import('./components/Wihts/Wihts'));
+const Schedule = lazy(() => import('./components/Schedule/Schedule'));
+const Hackatron2 = lazy(() => import('./components/Hackatron2/Hackatron2'));
+const Venue = lazy(() => import('./components/Venue/Venue'));
+const Prizes = lazy(() => import('./components/Prizes/Prizes'));
+const Tracks = lazy(() => import('./components/Tracks/Tracks'));
+const Sponsors = lazy(() => import('./components/Sponsors/Sponsors'));
+const PastSponsors = lazy(() => import('./components/Sponsors/PastSponsors'));
+const Faq = lazy(() => import('./components/Faq/Faq'));
+const Discord = lazy(() => import('./components/Discord/Discord'));
+const Footer = lazy(() => import('./components/Footer/Footer'));
+
 function App() {
   const [loading, setLoading] = useState(true);
+
   return (
     <>
       {loading && <Preloader onComplete={() => setLoading(false)} />}
-      <div className={`transition-opacity duration-700 ${loading ? 'opacity-0 h-0 overflow-hidden' : 'opacity-100'}`}></div>
-      <CustomScrollbar />
-      <FallingLeaves />
-      {/* <CursorFollower /> */}
-      <Navbar />
-      <LandingPage />
-      <About />
-      <Wihts />
-      <Schedule />
-      <Hackatron2 />
-      <Venue />
-      <Prizes />
-      <Tracks />
-      <Sponsors />
-      <PastSponsors />
-      {/* <Cp /> */}
-      <Faq />
-      <Discord />
-      <Footer />
+      <div className="fixed-bg" />
+      <div className={`transition-all duration-1000 ease-in-out ${loading ? 'opacity-0' : 'opacity-100'}`}>
+        <CustomScrollbar />
+        <FallingLeaves />
+        <Navbar />
+        <Suspense fallback={<div className="h-screen bg-[#080c0a]" />}>
+          <LandingPage />
+          <Reveal><About /></Reveal>
+          <Reveal><Wihts /></Reveal>
+          <Reveal><Schedule /></Reveal>
+          <Reveal><Hackatron2 /></Reveal>
+          <Reveal><Venue /></Reveal>
+          <Reveal><Prizes /></Reveal>
+          <Reveal><Tracks /></Reveal>
+          <Reveal><Sponsors /></Reveal>
+          <Reveal><PastSponsors /></Reveal>
+          <Reveal><Faq /></Reveal>
+          <Reveal><Discord /></Reveal>
+          <Footer />
+        </Suspense>
+      </div>
     </>
   )
 }

@@ -16,6 +16,9 @@ const vt323 = {
 };
 
 const theme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
   typography: {
     fontFamily: ['"Open Sans"', 'VT323', 'Roboto'].join(','),
   },

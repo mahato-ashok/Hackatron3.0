@@ -1,8 +1,9 @@
 .preloader-stars {
     position: absolute;
     inset: 0;
-    background-size: 110%;
+    background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     z-index: 0;
     opacity: 0.45;
 }

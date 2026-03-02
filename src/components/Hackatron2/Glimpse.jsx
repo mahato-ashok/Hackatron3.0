@@ -17,7 +17,7 @@ const ImageCard = ({ src1, src2, src3, className, content, content2 }) => {
         style={{ flexFlow: className ? "column-reverse" : "" }}
       >
         <div className="image-container">
-          <img src={src1} height="2700" width="570" alt="event" loading="lazy" decoding="async" />
+          <img src={src1} height="270" width="570" alt="event" loading="lazy" decoding="async" />
           <div className="content">
             <h2>{numbers[0]}+</h2>
             <p>{text}</p>

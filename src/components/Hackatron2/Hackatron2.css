@@ -61,10 +61,22 @@ hackatron2-container {
   border-radius: 0;
   object-fit: cover;
   width: 70%;
-  filter: saturate(1.5) brightness(1.1) contrast(1.1) hue-rotate(10deg); 
+  filter: saturate(1.5) brightness(1.1) contrast(1.1) hue-rotate(10deg);
   border: 3.5px dashed #00FF00;
   transition: all 0.3s ease;
+  animation: fadeIn 0.8s ease-in-out;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 
 .image-container>img:hover {
   box-shadow: 0 0 45px rgba(217, 149, 24, 0.45);
@@ -124,10 +136,11 @@ hackatron2-container {
   height: 100%;
   border-radius: 0px;
   object-fit: cover;
-  filter: saturate(1.5) brightness(1.1) contrast(1.1) hue-rotate(10deg); 
-  
+  filter: saturate(1.5) brightness(1.1) contrast(1.1) hue-rotate(10deg);
+
   border: 3.5px dashed #00FF00;
   transition: all 0.3s ease;
+  animation: fadeIn 0.8s ease-in-out;
 }
 
 .right-container>img:hover {
@@ -150,9 +163,10 @@ hackatron2-container {
 .bottom-container>img {
   border-radius: 0 px;
   object-fit: cover;
-  filter: saturate(1.5) brightness(1.1) contrast(1.1) hue-rotate(10deg); 
+  filter: saturate(1.5) brightness(1.1) contrast(1.1) hue-rotate(10deg);
   border: 3.5px dashed #00FF00;
   transition: all 0.3s ease;
+  animation: fadeIn 0.8s ease-in-out;
 }
 
 .bottom-container>img:hover {

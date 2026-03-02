@@ -6,6 +6,8 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
+    background-color: #080c0a;
+    /* Ensure dark base to prevent white flashes */
 }
 
 @tailwind base;
