@@ -80,7 +80,7 @@
 }
 
 /* ===================== APPLY BUTTON ===================== */
-.devfolio-btn {
+/*.devfolio-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -154,4 +154,4 @@
     .devfolio-btn img {
         width: 50px;
     }
-}
+}*/

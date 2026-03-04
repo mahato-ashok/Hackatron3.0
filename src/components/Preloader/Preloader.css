@@ -52,13 +52,13 @@
     }
 }
 
-.sloth-enter {
+/*.sloth-enter {
     animation: float-up-in 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 .sloth-idle {
     animation: float-idle 3.2s ease-in-out infinite;
-}
+}*/
 
 /* Blinking cursor */
 @keyframes blink {
@@ -95,13 +95,13 @@
     }
 }
 
-.progress-fill {
+/*.progress-fill {
     height: 100%;
     background: linear-gradient(90deg, #0384fc, #5FA6FF, #9d44c0, #ec53b0);
     box-shadow: 0 0 10px #5FA6FF, 0 0 22px rgba(236, 83, 176, 0.5);
     animation: seg-fill 3.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     border-radius: 1px;
-}
+}*/
 
 /* Percentage counter */
 @keyframes count-up {

@@ -88,13 +88,14 @@
 
 
 /* 2. Make all sections transparent so they don't block the z-index: -1 layer */
-section, 
+
+/*section, 
 main, 
 .landing-page, 
 .about-section, 
 .sponsors-section {
   background-color: transparent !important;
   position: relative;
-  /* Keep content above leaves */
   z-index: 999; 
-}
+}*/
+
