@@ -69,9 +69,10 @@ const PastSponsors = () => {
                 </div>
 
                 <div className='pt-2 pb-10 w-[94vw] xl:w-[78vw] 2xl:w-full mx-auto'>
-                    <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2 sm:gap-3 md:gap-4'>
+                    <div className='flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4'>
 
                         {[
+                            /*{ link: "https://mayadataprivacy.com/", img: mayaLogo, alt: "Maya Data Privacy", color: "#9d44c0", darkBg: true },
                             { link: "https://www.bugsee.com/", img: bugseeLogo, alt: "Bugsee", color: "#ec53b0" },
                             { link: "https://codingblocks.com/", img: codingBlocksLogo, alt: "Coding Blocks", color: "#e29b29" },
                             { link: "https://www.creative-tim.com/", img: creativeTimLogo, alt: "Creative Tim", color: "#5FA6FF" },
@@ -83,8 +84,22 @@ const PastSponsors = () => {
                             { link: "https://ethindia.co/", img: ethIndiaLogo, alt: "ETHIndia", color: "#9d44c0", darkBg: true },
                             { link: "https://devtown.in/", img: devtownLogo, alt: "DevTown", color: "#e29b29" },
                             { link: "https://technix.in/", img: technixLogo, alt: "TechNix", color: "#0384fc" },
-                            { link: "https://www.amul.com/", img: amulLogo, alt: "Amul", color: "#e29b29" },
-                            { link: "https://mayadataprivacy.com/", img: mayaLogo, alt: "Maya Data Privacy", color: "#9d44c0", darkBg: true },
+                            { link: "https://www.amul.com/", img: amulLogo, alt: "Amul", color: "#e29b29" },*/
+
+                            { link: "https://mayadataprivacy.com/", img: mayaLogo, alt: "Maya Data Privacy", darkBg: true },
+                            { link: "https://www.bugsee.com/", img: bugseeLogo, alt: "Bugsee"},
+                            { link: "https://codingblocks.com/", img: codingBlocksLogo, alt: "Coding Blocks"},
+                            { link: "https://www.creative-tim.com/", img: creativeTimLogo, alt: "Creative Tim"},
+                            { link: "https://www.educative.io/", img: educativeLogo, alt: "Educative"},
+                            { link: "https://www.teqip.in/", img: teqipLogo, alt: "TEQIP"},
+                            { link: "https://www.microsoft.com/", img: microsoftLogo, alt: "Microsoft Azure"},
+                            { link: "https://reskilll.com/", img: reskilllLogo, alt: "Reskilll"},
+                            { link: "https://devfolio.co/", img: devfolioLogo, alt: "Devfolio"},
+                            { link: "https://ethindia.co/", img: ethIndiaLogo, alt: "ETHIndia", darkBg: true },
+                            { link: "https://devtown.in/", img: devtownLogo, alt: "DevTown"},
+                            { link: "https://technix.in/", img: technixLogo, alt: "TechNix"},
+                            { link: "https://www.amul.com/", img: amulLogo, alt: "Amul"},
+                            
                         ].map((sponsor, i) => (
                             <Link
                                 key={i}
@@ -98,32 +113,34 @@ const PastSponsors = () => {
                                     xl:h-[80px]
                                     transition-all duration-200 hover:scale-105 hover:-translate-y-1"
                                 style={{
-                                    border: `2px dashed ${sponsor.color}`,
+                                    /*border: `2px dashed ${sponsor.color}`,*/
                                     background: 'linear-gradient(160deg, #060c4a 0%, #040842 60%, #080d3a 100%)',
-                                    boxShadow: `0 0 4px ${sponsor.color}55`,
+                                    /*boxShadow: `0 0 4px ${sponsor.color}55`,*/
                                     transition: 'box-shadow 0.2s ease, transform 0.2s ease',
+                                    width:"370px",
+                                    height:"150px"
                                 }}
-                                onMouseEnter={e => {
+                                /*onMouseEnter={e => {
                                     e.currentTarget.style.boxShadow = `0 0 18px ${sponsor.color}99, inset 0 0 10px ${sponsor.color}22`;
                                 }}
                                 onMouseLeave={e => {
                                     e.currentTarget.style.boxShadow = `0 0 6px ${sponsor.color}55`;
-                                }}
+                                }}*/
                             >
                                 {/* Inner card body */}
                                 <div
-                                    className="relative w-full h-full flex flex-col items-center justify-center overflow-hidden"
+                                    className="relative w-full h-full flex flex-col items-center justify-center overflow-hidden pt-4"
                                 >
                                     {/* Scanline texture */}
-                                    <div className="absolute inset-0 pointer-events-none opacity-[0.06]"
+                                    {/*<div className="absolute inset-0 pointer-events-none opacity-[0.06]"
                                         style={{ backgroundImage: 'repeating-linear-gradient(0deg, rgba(255,255,255,0.8) 0px, rgba(255,255,255,0.8) 1px, transparent 1px, transparent 4px)' }}
-                                    />
+                                    />*/}
 
                                     {/* Pixel tick marks on edges */}
-                                    <span className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-[2px] bg-[#ec53b0] opacity-60" />
+                                    {/*<span className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-[2px] bg-[#ec53b0] opacity-60" />
                                     <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-[2px] bg-[#ec53b0] opacity-60" />
                                     <span className="absolute left-0 top-1/2 -translate-y-1/2 h-4 w-[2px] bg-[#9d44c0] opacity-60" />
-                                    <span className="absolute right-0 top-1/2 -translate-y-1/2 h-4 w-[2px] bg-[#9d44c0] opacity-60" />
+                                    <span className="absolute right-0 top-1/2 -translate-y-1/2 h-4 w-[2px] bg-[#9d44c0] opacity-60" />*/}
 
                                     {/* Logo panel — dark bg for white-text logos */}
                                     <div className={`flex items-center justify-center w-[88%] h-[72%] rounded-sm px-2 py-1 ${sponsor.darkBg ? 'bg-[#111827]' : 'bg-white'}`}>
@@ -137,7 +154,8 @@ const PastSponsors = () => {
 
                                     {/* Sponsor name label */}
                                     <p className="font-vt323 text-[8px] sm:text-[9px] tracking-widest mt-1 opacity-0 group-hover:opacity-70 transition-opacity duration-200"
-                                        style={{ color: '#ec53b0' }}>
+                                        /*style={{ color: '#ec53b0' }}*/
+                                        style={{color:"white"}}>
                                         {sponsor.alt.toUpperCase()}
                                     </p>
                                 </div>

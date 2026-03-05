@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import stars from '../../assets/images/footer/stars.svg';
-import beeceptorLogo from '../../assets/images/sponsors/beeceptor.svg';
+/*import beeceptorLogo from '../../assets/images/sponsors/beeceptor.svg';
 import wolframLogo from '../../assets/images/sponsors/wolfram.png';
 import rosenfeldLogo from '../../assets/images/sponsors/rosenfeld.png';
 import oxDayLogo from '../../assets/images/sponsors/0xday.png';
@@ -22,8 +22,10 @@ import ethIndiaLogo from '../../assets/images/sponsors/ethIndia.png';
 import blockFlowLogo from '../../assets/images/sponsors/blockflow.png';
 import edugraphLogo from '../../assets/images/sponsors/edugraph.png';
 import texosLogo from '../../assets/images/sponsors/texos.png';
-import routerLogo from '../../assets/images/sponsors/router.svg';
+import routerLogo from '../../assets/images/sponsors/router.svg';*/
 import devfolioLogo2026 from '../../assets/images/Sponsors2026/Devfolio-logo.png';
+import codeCrafterLogo2026 from '../../assets/images/Sponsors2026/CodeCrafters-logo.png';
+import sybgenLogo2026 from '../../assets/images/Sponsors2026/SYBGEN-logo.jpg';
 
 const Sponsors = () => {
     const [bgSize, setBgSize] = useState("110%");
@@ -114,25 +116,28 @@ const Sponsors = () => {
                 </div>
 
                 {/* SILVER */}
-                {/* 
                 <div className='pt-3 3xl:pt-10 pb-4 border-dashed border-[#9e9e9e] border-b-[0.1rem] sm:border-b-[0.5rem] md:pt-4 sm:pb-10 w-[80vw] xl:w-[65vw] 2xl:w-full mx-auto flex flex-col items-center justify-center gap-5 lg:gap-6'>
                     <h1 className='font-vt323 font-medium text-[#9e9e9e] text-[9vw] leading-[5vw] sm:leading-[3.5rem] sm:text-[7vw] lg:text-[6vw] lg:leading-[3rem] xl:text-[5vw] xl:leading-[5rem] 3xl:text-[4vw]'>SILVER</h1>
                     <div className='flex flex-wrap max-sm:flex-col items-center justify-center gap-6 sm:gap-16 md:px-12 2xl:px-24 max-sm:gap-y-8'>
-                        <Link to='https://rosenfeldmedia.com/'><img src={rosenfeldLogo} alt="Rosenfeld" className='w-[35vw] sm:w-[18vw] md:w-[15vw] 3xl:w-[20rem]' /></Link>
-                        <Link to='https://www.echo3d.com/'><img src={echo3DLogo} alt="Echo3D" className='w-[35vw] sm:w-[18vw] md:w-[15vw] 3xl:w-[20rem]' /></Link>
+                        {/*<Link to='https://rosenfeldmedia.com/'><img src={rosenfeldLogo} alt="Rosenfeld" className='w-[35vw] sm:w-[18vw] md:w-[15vw] 3xl:w-[20rem]' /></Link>
+                        <Link to='https://www.echo3d.com/'><img src={echo3DLogo} alt="Echo3D" className='w-[35vw] sm:w-[18vw] md:w-[15vw] 3xl:w-[20rem]' /></Link>*/}
+                        <Link to='https://codecrafters.io/' target="_blank" rel="noopener noreferrer" className="bg-white rounded-2xl p-2 sm:p-4 flex items-center justify-center cursor-pointer hover:scale-105 hover:shadow-[0_0_25px_rgba(158,158,158,0.7)] transition-all duration-300">
+                            <img src={codeCrafterLogo2026} alt="CODECRAFTERS LOGO" width={1000} height={1000} className='w-[35vw] sm:w-[15vw] 3xl:w-[15rem]' />
+                        </Link>
                     </div>
                 </div>
-                */}
 
                 {/* PARTNER */}
                 <div className='pt-3 3xl:pt-10 pb-4 md:pt-4 sm:pb-10 w-[80vw] xl:w-[65vw] 2xl:w-full mx-auto flex flex-col items-center justify-center gap-5 lg:gap-6'>
                     <h1 className='font-vt323 font-medium text-[#9d44c0] text-[9vw] leading-[5vw] sm:leading-[3.5rem] sm:text-[7vw] lg:text-[6vw] lg:leading-[3rem] xl:text-[5vw] xl:leading-[5rem] 3xl:text-[4vw]'>PARTNER</h1>
-                    {/* LOGOS
+                    {/* LOGOS */}
                     <div className='flex flex-wrap max-sm:flex-col items-center justify-center gap-5 sm:gap-16 md:px-12 max-sm:gap-y-8 max-sm:mb-4'>
-                        <Link to='https://givemycertificate.com/'><img src={certificateLogo} alt="GiveMyCertificate" className='w-[40vw] sm:w-[18vw] md:w-[18vw] 3xl:w-[30rem]' /></Link>
-                        <Link to='https://www.quillaudits.com/'><img src={quillLogo} alt="Quill Audits" className='w-[40vw] sm:w-[18vw] md:w-[18vw] 3xl:w-[30rem]' /></Link>
+                        {/*<Link to='https://givemycertificate.com/'><img src={certificateLogo} alt="GiveMyCertificate" className='w-[40vw] sm:w-[18vw] md:w-[18vw] 3xl:w-[30rem]' /></Link>
+                        <Link to='https://www.quillaudits.com/'><img src={quillLogo} alt="Quill Audits" className='w-[40vw] sm:w-[18vw] md:w-[18vw] 3xl:w-[30rem]' /></Link>*/}
+                        <Link to='https://sybgen.com/' target="_blank" rel="noopener noreferrer" className="bg-white rounded-2xl p-2 sm:p-4 flex items-center justify-center cursor-pointer hover:scale-105 hover:shadow-[0_0_25px_rgba(157,68,192,0.7)] transition-all duration-300">
+                            <img src={sybgenLogo2026} alt="SYBGEN LOGO" width={1000} height={1000} className='w-[35vw] sm:w-[15vw] 3xl:w-[15rem]' />
+                        </Link>
                     </div>
-                    */}
                 </div>
             </div>
             <div
