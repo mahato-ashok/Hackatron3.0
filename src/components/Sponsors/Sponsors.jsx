@@ -67,7 +67,7 @@ const Sponsors = () => {
             // backgroundSize: bgSize,
         }} id='sponsors'>
             <div className="max-w-[1280px] 3xl:max-w-[2000px] md:mx-8 lg:mx-12 xl:mx-auto">
-                <h1 className='mx-5 xl:mx-0 py-6 md:text-left text-2xl md:text-4xl xl:text-5xl 3xl:text-7xl text-[#9E9E9E]'>$ cat ~/.ssh/<span className='text-white'>SPONSORS</span>.db</h1>
+                <h2 className='mx-5 xl:mx-0 py-6 md:text-left text-2xl md:text-4xl xl:text-5xl 3xl:text-7xl text-[#9E9E9E]'>$ cat ~/.ssh/<span className='text-white'>SPONSORS</span>.db</h2>
 
                 <div className='mb-4 flex flex-col gap-1 sm:gap-1'>
                     {/* <h1 className="font-vt323 font-medium text-[12vw] leading-[12vw] sm:leading-[4rem] md:leading-[5rem] md:text-[9vw] lg:text-[7vw] xl:text-[6vw] xl:leading-[6rem] 3xl:leading-[8rem]" style={{ background: 'linear-gradient(to right, blue,blue,#dd50b3,#dd50b3)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>SPONSORS</h1> */}
@@ -107,7 +107,7 @@ const Sponsors = () => {
 
                 {/* GOLD */}
                 <div className='pt-3 3xl:pt-10 pb-4 border-dashed border-[#e29b29] border-b-[0.1rem] sm:border-b-[0.5rem] md:pt-4 sm:pb-10 w-[80vw] xl:w-[65vw] 2xl:w-full mx-auto flex flex-col items-center justify-center gap-5 lg:gap-6'>
-                    <h1 className='font-vt323 font-medium text-[#e29b29] text-[9vw] leading-[5vw] sm:leading-[3.5rem] sm:text-[7vw] lg:text-[6vw] lg:leading-[3rem] xl:text-[5vw] xl:leading-[5rem] 3xl:text-[4vw]'>GOLD</h1>
+                    <h3 className='font-vt323 font-medium text-[#e29b29] text-[9vw] leading-[5vw] sm:leading-[3.5rem] sm:text-[7vw] lg:text-[6vw] lg:leading-[3rem] xl:text-[5vw] xl:leading-[5rem] 3xl:text-[4vw]'>GOLD</h3>
                     <div className='flex flex-wrap max-sm:flex-col items-center justify-center gap-4 sm:gap-y-12 sm:gap-x-32 px-12 max-sm:gap-y-8 max-sm:mb-4'>
                         <Link to='https://devfolio.co/' target="_blank" rel="noopener noreferrer" className="bg-white rounded-2xl p-2 sm:p-4 flex items-center justify-center cursor-pointer hover:scale-105 hover:shadow-[0_0_25px_rgba(226,155,41,0.7)] transition-all duration-300">
                             <img src={devfolioLogo2026} alt="DEVFOLIO LOGO" width={1000} height={1000} className='w-[35vw] sm:w-[15vw] 3xl:w-[15rem]' />
@@ -117,7 +117,7 @@ const Sponsors = () => {
 
                 {/* SILVER */}
                 <div className='pt-3 3xl:pt-10 pb-4 border-dashed border-[#9e9e9e] border-b-[0.1rem] sm:border-b-[0.5rem] md:pt-4 sm:pb-10 w-[80vw] xl:w-[65vw] 2xl:w-full mx-auto flex flex-col items-center justify-center gap-5 lg:gap-6'>
-                    <h1 className='font-vt323 font-medium text-[#9e9e9e] text-[9vw] leading-[5vw] sm:leading-[3.5rem] sm:text-[7vw] lg:text-[6vw] lg:leading-[3rem] xl:text-[5vw] xl:leading-[5rem] 3xl:text-[4vw]'>SILVER</h1>
+                    <h3 className='font-vt323 font-medium text-[#9e9e9e] text-[9vw] leading-[5vw] sm:leading-[3.5rem] sm:text-[7vw] lg:text-[6vw] lg:leading-[3rem] xl:text-[5vw] xl:leading-[5rem] 3xl:text-[4vw]'>SILVER</h3>
                     <div className='flex flex-wrap max-sm:flex-col items-center justify-center gap-6 sm:gap-16 md:px-12 2xl:px-24 max-sm:gap-y-8'>
                         {/*<Link to='https://rosenfeldmedia.com/'><img src={rosenfeldLogo} alt="Rosenfeld" className='w-[35vw] sm:w-[18vw] md:w-[15vw] 3xl:w-[20rem]' /></Link>
                         <Link to='https://www.echo3d.com/'><img src={echo3DLogo} alt="Echo3D" className='w-[35vw] sm:w-[18vw] md:w-[15vw] 3xl:w-[20rem]' /></Link>*/}
@@ -129,7 +129,7 @@ const Sponsors = () => {
 
                 {/* PARTNER */}
                 <div className='pt-3 3xl:pt-10 pb-4 md:pt-4 sm:pb-10 w-[80vw] xl:w-[65vw] 2xl:w-full mx-auto flex flex-col items-center justify-center gap-5 lg:gap-6'>
-                    <h1 className='font-vt323 font-medium text-[#9d44c0] text-[9vw] leading-[5vw] sm:leading-[3.5rem] sm:text-[7vw] lg:text-[6vw] lg:leading-[3rem] xl:text-[5vw] xl:leading-[5rem] 3xl:text-[4vw]'>PARTNER</h1>
+                    <h3 className='font-vt323 font-medium text-[#9d44c0] text-[9vw] leading-[5vw] sm:leading-[3.5rem] sm:text-[7vw] lg:text-[6vw] lg:leading-[3rem] xl:text-[5vw] xl:leading-[5rem] 3xl:text-[4vw]'>PARTNER</h3>
                     {/* LOGOS */}
                     <div className='flex flex-wrap max-sm:flex-col items-center justify-center gap-5 sm:gap-16 md:px-12 max-sm:gap-y-8 max-sm:mb-4'>
                         {/*<Link to='https://givemycertificate.com/'><img src={certificateLogo} alt="GiveMyCertificate" className='w-[40vw] sm:w-[18vw] md:w-[18vw] 3xl:w-[30rem]' /></Link>

@@ -51,13 +51,13 @@ const PastSponsors = () => {
 
     return (
         <section className="max-[768px]:pt-[40px] pt-[80px] relative" style=
-        {{
-            // backgroundImage: `url(${stars})`,
-            // backgroundPosition: `${50}% ${50 - bgPosition.y}%`,
-            // backgroundSize: bgSize,
-        }} id='past-sponsors'>
+            {{
+                // backgroundImage: `url(${stars})`,
+                // backgroundPosition: `${50}% ${50 - bgPosition.y}%`,
+                // backgroundSize: bgSize,
+            }} id='past-sponsors'>
             <div className="max-w-[1280px] 3xl:max-w-[2000px] md:mx-8 lg:mx-12 xl:mx-auto">
-                <h1 className='mx-5 xl:mx-0 py-6 md:text-left text-2xl md:text-4xl xl:text-5xl 3xl:text-7xl text-[#9E9E9E]'>$ zcat <span className='text-white'>PAST_SPONSORS</span>.gz</h1>
+                <h2 className='mx-5 xl:mx-0 py-6 md:text-left text-2xl md:text-4xl xl:text-5xl 3xl:text-7xl text-[#9E9E9E]'>$ zcat <span className='text-white'>PAST_SPONSORS</span>.gz</h2>
 
                 <div className='mb-4 flex flex-col gap-1 sm:gap-1'>
                     <p className='font-vt323 text-gray-400 w-[90vw] leading-[5vw] text-[4.5vw] sm:leading-0 sm:px-0  sm:w-[70vw] sm:text-lg sm:leading-5 md:text-[2.8vw] md:leading-6 md:w-[75vw] lg:text-xl lg:w-[56vw] lg:leading-5 xl:text-3xl xl:w-[55rem] 3xl:text-5xl 3xl:w-[75rem] text-center mx-auto'>Thank you to our generous sponsors from previous years!</p>
@@ -88,20 +88,20 @@ const PastSponsors = () => {
                             { link: "https://www.amul.com/", img: amulLogo, alt: "Amul", color: "#e29b29" },*/
 
                             { link: "https://mayadataprivacy.com/", img: mayaLogo, alt: "Maya Data Privacy", darkBg: true },
-                            { link: "https://www.bugsee.com/", img: bugseeLogo, alt: "Bugsee"},
-                            { link: "https://codingblocks.com/", img: codingBlocksLogo, alt: "Coding Blocks"},
-                            { link: "https://www.creative-tim.com/", img: creativeTimLogo, alt: "Creative Tim"},
-                            { link: "https://www.educative.io/", img: educativeLogo, alt: "Educative"},
-                            { link: "https://www.teqip.in/", img: teqipLogo, alt: "TEQIP"},
-                            { link: "https://www.microsoft.com/", img: microsoftLogo, alt: "Microsoft Azure"},
-                            { link: "https://reskilll.com/", img: reskilllLogo, alt: "Reskilll"},
-                            { link: "https://devfolio.co/", img: devfolioLogo, alt: "Devfolio"},
-                            { link: "https://www.geekroom.in/", img: geekRoomLogo, alt: "Geek Room"},
+                            { link: "https://www.bugsee.com/", img: bugseeLogo, alt: "Bugsee" },
+                            { link: "https://codingblocks.com/", img: codingBlocksLogo, alt: "Coding Blocks" },
+                            { link: "https://www.creative-tim.com/", img: creativeTimLogo, alt: "Creative Tim" },
+                            { link: "https://www.educative.io/", img: educativeLogo, alt: "Educative" },
+                            { link: "https://www.teqip.in/", img: teqipLogo, alt: "TEQIP" },
+                            { link: "https://www.microsoft.com/", img: microsoftLogo, alt: "Microsoft Azure" },
+                            { link: "https://reskilll.com/", img: reskilllLogo, alt: "Reskilll" },
+                            { link: "https://devfolio.co/", img: devfolioLogo, alt: "Devfolio" },
+                            { link: "https://www.geekroom.in/", img: geekRoomLogo, alt: "Geek Room" },
                             { link: "https://ethindia.co/", img: ethIndiaLogo, alt: "ETHIndia", darkBg: true },
-                            { link: "https://devtown.in/", img: devtownLogo, alt: "DevTown"},
-                            { link: "https://technix.in/", img: technixLogo, alt: "TechNix"},
-                            { link: "https://www.amul.com/", img: amulLogo, alt: "Amul"},
-                            
+                            { link: "https://devtown.in/", img: devtownLogo, alt: "DevTown" },
+                            { link: "https://technix.in/", img: technixLogo, alt: "TechNix" },
+                            { link: "https://www.amul.com/", img: amulLogo, alt: "Amul" },
+
                         ].map((sponsor, i) => (
                             <Link
                                 key={i}
@@ -119,15 +119,15 @@ const PastSponsors = () => {
                                     background: 'linear-gradient(160deg, #060c4a 0%, #040842 60%, #080d3a 100%)',
                                     /*boxShadow: `0 0 4px ${sponsor.color}55`,*/
                                     transition: 'box-shadow 0.2s ease, transform 0.2s ease',
-                                    width:"370px",
-                                    height:"150px"
+                                    width: "370px",
+                                    height: "150px"
                                 }}
-                                /*onMouseEnter={e => {
-                                    e.currentTarget.style.boxShadow = `0 0 18px ${sponsor.color}99, inset 0 0 10px ${sponsor.color}22`;
-                                }}
-                                onMouseLeave={e => {
-                                    e.currentTarget.style.boxShadow = `0 0 6px ${sponsor.color}55`;
-                                }}*/
+                            /*onMouseEnter={e => {
+                                e.currentTarget.style.boxShadow = `0 0 18px ${sponsor.color}99, inset 0 0 10px ${sponsor.color}22`;
+                            }}
+                            onMouseLeave={e => {
+                                e.currentTarget.style.boxShadow = `0 0 6px ${sponsor.color}55`;
+                            }}*/
                             >
                                 {/* Inner card body */}
                                 <div
@@ -157,7 +157,7 @@ const PastSponsors = () => {
                                     {/* Sponsor name label */}
                                     <p className="font-vt323 text-[8px] sm:text-[9px] tracking-widest mt-1 opacity-0 group-hover:opacity-70 transition-opacity duration-200"
                                         /*style={{ color: '#ec53b0' }}*/
-                                        style={{color:"white"}}>
+                                        style={{ color: "white" }}>
                                         {sponsor.alt.toUpperCase()}
                                     </p>
                                 </div>

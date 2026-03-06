@@ -3,19 +3,28 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Hackatron 3.0 — A 36-hour hackathon by HNCC BIT Sindri. Design, debug, and deploy innovative solutions across diverse tech tracks." />
+
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="/src/assets/images/Navbar/Hackatron2.png" />
   <link rel="apple-touch-icon" href="/hackatron-favicon.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-  <title>Hackatron | BIT Sindri</title>
+
+  <!-- Preconnect for Devfolio SDK (used in LandingPage) -->
+  <link rel="preconnect" href="https://apply.devfolio.co" />
+
+  <!-- Preload critical above-the-fold assets for faster LCP -->
+  <link rel="preload" as="image" href="/images/head.webp" fetchpriority="high" type="image/webp" />
+  <link rel="preload" as="image" href="/images/HomeMascot_static.webp" fetchpriority="high" type="image/webp" />
+  <link rel="preload" as="image" href="/images/bg.webp" fetchpriority="high" type="image/webp" />
+
+  <title>Hackatron 3.0 | BIT Sindri</title>
 </head>
 
-<body class="">
+<body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 
 </html>
-<!-- bg-no-repeat w-[100vw] h-[2000px] bg-cover before:bg-gradient-to-b before:from-purple-600 before:to-blue-600 bg-[url('/images/homebgimage.svg')] -->

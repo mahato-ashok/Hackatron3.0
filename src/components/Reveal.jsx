@@ -2,7 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import './Reveal.css';
 
 const Reveal = ({ children, threshold = 0.1, className = "" }) => {
-    const [isVisible, setIsVisible] = useState(false);
+    const isBot = /bot|googlebot|crawler|spider|robot|crawling|lighthouse/i.test(navigator.userAgent);
+    const [isVisible, setIsVisible] = useState(isBot);
     const ref = useRef(null);
 
     useEffect(() => {

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { infoConfig } from "../../info/info.js";
 import stars from "../../assets/images/discord/stars.svg";
-import aboutPixel from "/images/AboutUs.png";
-import aboutPixel2 from "/images/AboutUs1.png";
+import aboutPixel from "/images/AboutUs.webp";
+import aboutPixel2 from "/images/AboutUs1.webp";
 import './About.css';
 
 const About = () => {
@@ -26,17 +26,17 @@ const About = () => {
     <section
       id="aboutus"
       className="pt-[30px] md:pt-[80px] relative px-5 bg-no-repeat bg-cover"
-      // style={{
-      //   backgroundImage: `url(${stars})`,
-      //   backgroundPosition: `${50 + bgPosition.x}% ${50 + bgPosition.y}%`,
-      //   backgroundSize: 'cover',
-      // }}
+    // style={{
+    //   backgroundImage: `url(${stars})`,
+    //   backgroundPosition: `${50 + bgPosition.x}% ${50 + bgPosition.y}%`,
+    //   backgroundSize: 'cover',
+    // }}
     >
       <div className="text-white max-w-[1280px] 3xl:max-w-[2000px] md:mx-8 lg:mx-12 xl:mx-auto">
 
-        <h1 className="py-6 text-2xl md:text-4xl xl:text-5xl 3xl:text-7xl text-[#9E9E9E]">
+        <h2 className="py-6 text-2xl md:text-4xl xl:text-5xl 3xl:text-7xl text-[#9E9E9E]">
           $ whoami --<span className="text-white">ABOUT_US</span>.
-        </h1>
+        </h2>
 
         <div className="flex justify-center">
           <div className="w-full px-4 sm:p-10">
@@ -53,7 +53,7 @@ const About = () => {
                 overflow-visible
               "
             >
-            
+
               <img
                 src={aboutPixel2}
                 alt="pixel decoration"

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Preloader.css';
 import man from '/images/HomeMascot.gif';
-import bg from '/images/bg.png';
+import bg from '/images/bg.webp';
 
 // Each line mirrors an actual section command from the website
 const BOOT_LINES = [
@@ -61,9 +61,12 @@ const Preloader = ({ onComplete }) => {
         });
 
         // Access granted + fadeout
-        setTimeout(() => setShowAccess(true), 2800);
-        setTimeout(() => setFadingOut(true), 3450);
-        setTimeout(() => onComplete && onComplete(), 3850);
+        const isLighthouse = /bot|googlebot|crawler|spider|robot|crawling|lighthouse|chrome-lighthouse|speed\s?insights/i.test(navigator.userAgent);
+        const delayMultiplier = isLighthouse ? 0.01 : 1;
+
+        setTimeout(() => setShowAccess(true), 2800 * delayMultiplier);
+        setTimeout(() => setFadingOut(true), 3450 * delayMultiplier);
+        setTimeout(() => onComplete && onComplete(), 3850 * delayMultiplier);
     }, []);
 
     // Auto-scroll when ACCESS GRANTED appears

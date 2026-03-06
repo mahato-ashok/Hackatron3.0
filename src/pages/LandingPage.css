@@ -7,11 +7,11 @@
 }
 
 .imgHead-background {
-    width: 85%;
-    max-width: 860px;
+    width: 90%;
+    max-width: 920px;
     height: auto;
     object-fit: contain;
-    margin-top: 2%;
+    margin-top: 1%;
     margin-bottom: 0;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
 }
@@ -41,41 +41,35 @@
 }
 
 .home-mascot-img {
-    /* Full width on mobile, constrained on desktop */
-    width: 160px;
-    height: auto;
+    /* Prominent mascot: fits within viewport */
+    width: auto;
+    height: 38vh;
+    min-height: 160px;
+    max-height: 380px;
     object-fit: contain;
     pointer-events: none;
     user-select: none;
-}
-
-@media (min-width: 640px) {
-    .home-mascot-img {
-        width: 200px;
-    }
+    filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.6));
 }
 
 @media (min-width: 768px) {
     .home-mascot-img {
-        width: 220px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .home-mascot-img {
-        width: 260px;
+        height: 42vh;
+        max-height: 420px;
     }
 }
 
 @media (min-width: 1280px) {
     .home-mascot-img {
-        width: 300px;
+        height: 48vh;
+        max-height: 520px;
     }
 }
 
 @media (min-width: 2560px) {
     .home-mascot-img {
-        width: 440px;
+        height: 50vh;
+        max-height: 800px;
     }
 }
 

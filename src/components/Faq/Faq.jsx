@@ -69,9 +69,9 @@ export default function Faq() {
     >
       <div className="max-w-7xl mx-auto">
 
-        <h1 className="py-6 md:text-left text-2xl md:text-4xl xl:text-5xl 3xl:text-7xl text-[#9E9E9E]">
+        <h2 className="py-6 md:text-left text-2xl md:text-4xl xl:text-5xl 3xl:text-7xl text-[#9E9E9E]">
           $ grep -i help <span className="text-white">FAQ</span>.txt
-        </h1>
+        </h2>
 
 
         {/* Mobile = column | Desktop = 2 columns */}
