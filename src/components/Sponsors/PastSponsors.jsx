@@ -14,6 +14,7 @@ import devtownLogo from '../../assets/images/past_sponsors/devtown.jpg';
 import technixLogo from '../../assets/images/past_sponsors/Technix_.jpg';
 import amulLogo from '../../assets/images/past_sponsors/amul.png';
 import mayaLogo from '../../assets/images/past_sponsors/maya-data-privacy.png';
+import geekRoomLogo from "../../assets/images/past_sponsors/geekRoom.jpeg"
 
 const PastSponsors = () => {
     const [bgSize, setBgSize] = useState("110%");
@@ -95,6 +96,7 @@ const PastSponsors = () => {
                             { link: "https://www.microsoft.com/", img: microsoftLogo, alt: "Microsoft Azure"},
                             { link: "https://reskilll.com/", img: reskilllLogo, alt: "Reskilll"},
                             { link: "https://devfolio.co/", img: devfolioLogo, alt: "Devfolio"},
+                            { link: "https://www.geekroom.in/", img: geekRoomLogo, alt: "Geek Room"},
                             { link: "https://ethindia.co/", img: ethIndiaLogo, alt: "ETHIndia", darkBg: true },
                             { link: "https://devtown.in/", img: devtownLogo, alt: "DevTown"},
                             { link: "https://technix.in/", img: technixLogo, alt: "TechNix"},

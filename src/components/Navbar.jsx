@@ -60,6 +60,9 @@ export default function Navbar() {
         }
     };
 
+    const scrollToTeams = () => {
+        window.open("https://www.hnccbits.com/teams", "_blank");
+    };
 
 
     return (
@@ -93,7 +96,9 @@ export default function Navbar() {
                         { name: 'TRACKS', func: scrollToTracks },
                         { name: 'SPONSORS', func: scrollToSponsors },
                         { name: 'FAQ', func: scrollToFaq },
+                        { name: 'TEAMS', func: scrollToTeams },
                         { name: 'CONTACT US', func: scrollToFooter }
+
                     ].map((item) => (
                         <a key={item.name} onClick={item.func}>
                             <li className="nav-pixel-link hover:text-[#39FF14] cursor-pointer transition-colors duration-200 uppercase">
