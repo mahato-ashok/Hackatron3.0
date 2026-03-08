@@ -27,6 +27,8 @@ import devfolioLogo2026 from '../../assets/images/Sponsors2026/Devfolio-logo.web
 import codeCrafterLogo2026 from '../../assets/images/Sponsors2026/CodeCrafters-logo.webp';
 import sybgenLogo2026 from '../../assets/images/Sponsors2026/SYBGEN-logo.webp';
 
+import interviewCakeLogo2026 from '../../assets/images/Sponsors2026/interview-cake-logo.webp';
+
 const Sponsors = () => {
     const [bgSize, setBgSize] = useState("110%");
     const [bgPosition, setBgPosition] = useState({ x: 0, y: 0 });
@@ -152,6 +154,16 @@ const Sponsors = () => {
                                     <p className="font-vt323 text-[#ec53b0] text-lg md:text-xl tracking-widest text-center px-1 whitespace-nowrap bg-black/40 rounded">SYBGEN</p>
                                 </div>
                             </Link>
+
+                            <Link to='https://www.interviewcake.com/' target="_blank" rel="noopener noreferrer" className="relative flex mt-20 flex-col items-center justify-center w-[60vw] h-[100px] sm:w-[15vw] sm:h-[120px] 3xl:w-[15rem] transition-all duration-300 hover:scale-105">
+                                <div className="flex items-center justify-center w-full h-full p-4 bg-white rounded-2xl shadow-[0_0_25px_rgba(157,68,192,0.3)] hover:shadow-[0_0_25px_rgba(157,68,192,0.7)] transition-all duration-300 overflow-hidden">
+                                    <img loading="lazy" src={interviewCakeLogo2026} alt="SYBGEN LOGO" width={1000} height={1000} className='max-w-full max-h-full w-auto h-auto object-contain' />
+                                </div>
+                                <div className="absolute top-full left-0 right-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 pt-3 z-10">
+                                    <p className="font-vt323 text-[#ec53b0] text-lg md:text-xl tracking-widest text-center px-1 whitespace-nowrap bg-black/40 rounded">INTERVIEW-CAKE</p>
+                                </div>
+                            </Link>
+
                         </div>
                     </div>
                 </div>
