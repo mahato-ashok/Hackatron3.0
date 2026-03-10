@@ -12,6 +12,8 @@
     min-height: 220px;
 }
 
+/* Removed footer-top-gradient in favor of mask-image */
+
 /* Background image fills horizontally, crops on small screens */
 .img-background {
     width: 100%;
@@ -21,6 +23,9 @@
     /* Crop from center - shows the interesting middle of the footer image */
     object-position: center center;
     display: block;
+    /* smooth fade at the top */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 20%);
 }
 
 /* On mobile, show only the top portion of the footer background (sky/top of image) */

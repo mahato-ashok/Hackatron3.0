@@ -1,26 +1,16 @@
 import React, { useMemo, useEffect, useState } from 'react';
 import './FallingLeaves.css';
-import leaf1 from '../assets/images/leaf1.png';
-import leaf2 from '../assets/images/leaf2.png';
+import leaf1 from '../assets/images/leaf1.webp';
+import leaf2 from '../assets/images/leaf2.webp';
 
-const FallingLeaves = ({ count = 20 }) => {
-  const [gust, setGust] = useState(0);
+const FallingLeaves = ({ count = 12 }) => {
+  // Defer leaf rendering until after initial page paint to avoid competing with LCP
+  const [ready, setReady] = useState(false);
 
-  // useEffect(() => {
-  //   let timeout;
-  //   const handleMouseMove = (e) => {
-  //     // Calculate a gust value based on horizontal mouse speed
-  //     const intensity = Math.min(Math.abs(e.movementX) * 2, 100);
-  //     setGust(e.movementX > 0 ? intensity : -intensity);
-
-  //     // Reset gust after mouse stops
-  //     clearTimeout(timeout);
-  //     timeout = setTimeout(() => setGust(0), 500);
-  //   };
-
-  //   window.addEventListener('mousemove', handleMouseMove);
-  //   return () => window.removeEventListener('mousemove', handleMouseMove);
-  // }, []);
+  useEffect(() => {
+    const timer = setTimeout(() => setReady(true), 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const leaves = useMemo(() => {
     return Array.from({ length: count }).map((_, i) => ({
@@ -28,18 +18,18 @@ const FallingLeaves = ({ count = 20 }) => {
       image: Math.random() > 0.5 ? leaf1 : leaf2,
       left: Math.random() * 100,
       delay: Math.random() * -20,
-      duration: 30 + Math.random() * 40, // Increased base and random range for slower animation
+      duration: 30 + Math.random() * 40,
       size: 12 + Math.random() * 30,
       drift: (Math.random() - 0.5) * 150,
       rotation: Math.random() * 360,
-      opacity: 0.5 + Math.random() * 0.4, // Dimmer for background
+      opacity: 0.5 + Math.random() * 0.4,
     }));
   }, [count]);
 
+  if (!ready) return null;
+
   return (
-    <div className="leaf-container" style={{
-      // '--gust': `${gust}px` 
-    }}>
+    <div className="leaf-container">
       {leaves.map((leaf) => (
         <div
           key={leaf.id}

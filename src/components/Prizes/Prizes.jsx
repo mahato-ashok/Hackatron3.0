@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import stars from '../../assets/images/discord/stars.svg';
-import win1 from '../../assets/images/prizes/win1.png';
+import win1 from '../../assets/images/prizes/win1.webp';
 import win2 from '../../assets/images/prizes/win2.png';
 import win6 from '../../assets/images/prizes/win6.png';
 import win5 from '../../assets/images/prizes/win5.png';
@@ -33,7 +33,7 @@ const Prizes = () => {
                 // backgroundSize: 'cover',
             }}
         >
-            {/* <img
+            {/* <img loading="lazy"
                 src={prizesbg}
                 alt=""
                 className="absolute w-full h-full object-cover top-0 left-0"
@@ -41,9 +41,9 @@ const Prizes = () => {
             /> */}
             <div className='text-white max-w-[1280px] 3xl:max-w-[2000px] md:mx-8 lg:mx-12 xl:mx-auto z-2'>
 
-                <h1 className="py-6 md:text-left text-2xl md:text-4xl xl:text-5xl 3xl:text-7xl text-[#9E9E9E]">
+                <h2 className="py-6 md:text-left text-2xl md:text-4xl xl:text-5xl 3xl:text-7xl text-[#9E9E9E]">
                     $ sudo decrypt <span className="text-white">PRIZES</span>.enc
-                </h1>
+                </h2>
                 <div className="flex justify-center items-center h-full">
                     <div className="px-4 sm:p-10 text-left w-full">
                         {/* Main Rectangle */}
@@ -57,7 +57,6 @@ const Prizes = () => {
             alt="Prize"
             className="w-32 md:w-100 lg:w-48 md:h-90 mb-4 object-contain"
         />
-
         <h2 className="text-2xl md:text-6xl font-semibold">CASH PRIZE</h2>
         <h2 className="text-3xl md:text-5xl text-blue-500 mt-2 font-semibold">₹50000</h2>
 

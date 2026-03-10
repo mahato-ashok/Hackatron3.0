@@ -1,7 +1,7 @@
 import SwipeableTemporaryDrawer from "./HamburgerMenu";
-import bitlogo from '../assets/images/Navbar/bitlogo.png';
-import iiit_logo_mobile from '../assets/images/Navbar/hncc.png';
-import sc1_logo from '../assets/images/Navbar/Hackatron2.png';
+import bitlogo from '../assets/images/Navbar/bitlogo.webp';
+import iiit_logo_mobile from '../assets/images/Navbar/hncc.webp';
+import sc1_logo from '../assets/images/Navbar/Hackatron2.webp';
 import './Navbar.css';
 export default function Navbar() {
     const scrollToSchedule = () => {
@@ -60,6 +60,9 @@ export default function Navbar() {
         }
     };
 
+    const scrollToTeams = () => {
+        window.open("https://www.hnccbits.com/teams", "_blank");
+    };
 
 
     return (
@@ -86,16 +89,27 @@ export default function Navbar() {
 
                     {/* Updated Link Styles */}
                     {[
-                        { name: 'SCHEDULE', func: scrollToSchedule },
-                        { name: 'ABOUT', func: scrollToAbout },
-                        { name: 'VENUE', func: scrollToVenue },
-                        { name: 'PRIZES', func: scrollToPrizes },
-                        { name: 'TRACKS', func: scrollToTracks },
-                        { name: 'SPONSORS', func: scrollToSponsors },
-                        { name: 'FAQ', func: scrollToFaq },
-                        { name: 'CONTACT US', func: scrollToFooter }
+                        { name: 'SCHEDULE', href: '#schedule', func: scrollToSchedule },
+                        { name: 'ABOUT', href: '#aboutus', func: scrollToAbout },
+                        { name: 'VENUE', href: '#venue', func: scrollToVenue },
+                        { name: 'PRIZES', href: '#prizes', func: scrollToPrizes },
+                        { name: 'TRACKS', href: '#tracks', func: scrollToTracks },
+                        { name: 'SPONSORS', href: '#sponsors', func: scrollToSponsors },
+                        { name: 'FAQ', href: '#faq', func: scrollToFaq },
+                        { name: 'TEAMS', href: '#teams', func: scrollToTeams },
+                        { name: 'CONTACT US', href: '#footer', func: scrollToFooter }
+
                     ].map((item) => (
-                        <a key={item.name} onClick={item.func}>
+                        <a
+                            key={item.name}
+                            href={item.href}
+                            onClick={(e) => {
+                                if (item.name !== 'TEAMS') {
+                                    e.preventDefault();
+                                    item.func();
+                                }
+                            }}
+                        >
                             <li className="nav-pixel-link hover:text-[#39FF14] cursor-pointer transition-colors duration-200 uppercase">
                                 {item.name}
                             </li>
@@ -104,12 +118,11 @@ export default function Navbar() {
                 </ul>
 
                 <div className="flex gap-4 max-md:gap-2 items-center">
-                    <a href="https://www.bitsindri.ac.in/" target="_blank">
-
-                        <img className="w-12 h-12 max-md:w-8 max-md:h-8 rendering-pixelated" src={bitlogo} alt="BIT Sindri Logo" />
+                    <a href="https://www.bitsindri.ac.in/" target="_blank" rel="noopener noreferrer" aria-label="Visit BIT Sindri Website">
+                        <img className="w-12 h-12 max-md:w-8 max-md:h-8 rendering-pixelated object-contain" src={bitlogo} alt="BIT Sindri Logo" />
                     </a>
-                    <a href="https://www.hnccbits.com/" target="_blank" rel="noopener noreferrer">
-                        <img className="w-14 h-14 max-md:w-10 max-md:h-10 rendering-pixelated" src={iiit_logo_mobile} alt="HnCC Logo"
+                    <a href="https://www.hnccbits.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit HNCC BIT Sindri Website">
+                        <img className="w-14 h-14 max-md:w-10 max-md:h-10 rendering-pixelated object-contain" src={iiit_logo_mobile} alt="HnCC Logo"
                         />
                     </a>
                     <SwipeableTemporaryDrawer />

@@ -32,13 +32,16 @@ function Discord() {
                     backgroundRepeat: 'no-repeat',
                 }}
             ></div>
-            {/* <img src={Bgimage} alt="Join Discord" className="img-background" /> */}
+            {/* <img loading="lazy" src={Bgimage} alt="Join Discord" className="img-background" /> */}
             <a
                 href="https://discord.gg/UHwPBzy7UF"
+                aria-label="Join our Discord Server"
                 className="bottom-overlay"
                 target="_blank"
                 rel="noopener noreferrer"
-            ></a>
+            >
+                <span className="sr-only">Join our Discord Server</span>
+            </a>
         </div>
     );
 }

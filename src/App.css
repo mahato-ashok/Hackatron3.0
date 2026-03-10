@@ -6,13 +6,41 @@ html {
 body {
   margin: 0;
   padding: 0;
-  /* Your Background Image lives here now */
+  /* Background moved to App.jsx fixed-bg div for mobile stability */
+  background-color: transparent !important;
+}
+
+.fixed-bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  /* PNG fallback for browsers that don't support WebP */
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/bg.png');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Keeps image still while scrolling */
-  background-color: #080c0a; /* Fallback color */
+  z-index: -100;
+  /* Behind everything */
+  pointer-events: none;
+  background-color: #080c0a;
+  /* Performance: compositor layer, avoids layout recalculation */
+  will-change: transform;
+  contain: strict;
 }
+
+@supports (background-image: url('/images/bg.webp')) {
+  .fixed-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/bg.webp');
+  }
+}
+
+/* WebP background for modern browsers */
+@supports (background-image: url("data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEAAAAA")) {
+  .fixed-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/bg.webp');
+  }
+}
+
 
 /* Ensure the root React div doesn't block the view */
 #root {
@@ -48,9 +76,4 @@ body {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
-
-
-.read-the-docs {
-  color: #888;
 }

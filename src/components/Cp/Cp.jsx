@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+/*import React, { useState, useEffect } from 'react';
 import './Cp.css';
 
 const topImages = [
@@ -63,7 +63,7 @@ const SimpleSlider = ({ images, direction }) => {
       >
         {images.map((image, index) => (
           <div key={index} className="slide my-3 sm:my-6 mx-4 sm:mx-10 w-[200px] sm:w-[30vw] md:w-[25vw] xl:w-[20vw] 3xl:w-[20vw]">
-            <img
+            <img loading="lazy"
             // adding the extra text to get it to display on github pages (only for dev) (remove before deploy)
               src={(window.location.href == "https://iiitkalyanifosc.github.io/Hackathon-website-2024/" ? "/Hackathon-website-2024" : "") + image.src}
               alt={image.alt}
@@ -96,3 +96,4 @@ const Cp = () => {
 }
 
 export default Cp;
+*/

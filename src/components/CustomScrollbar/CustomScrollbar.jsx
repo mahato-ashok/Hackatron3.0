@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import spriteSheet from '../../assets/images/scrollbar_sprites.png';
+import spriteSheet from '../../assets/images/scrollbar_sprites.webp';
 
 const CustomScrollbar = () => {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);

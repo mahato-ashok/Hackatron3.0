@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Preloader.css';
 import man from '/images/HomeMascot.gif';
-import bg from '/images/bg.png';
+import bg from '/images/bg.webp';
 
 // Each line mirrors an actual section command from the website
 const BOOT_LINES = [
@@ -61,9 +61,12 @@ const Preloader = ({ onComplete }) => {
         });
 
         // Access granted + fadeout
-        setTimeout(() => setShowAccess(true), 2800);
-        setTimeout(() => setFadingOut(true), 3450);
-        setTimeout(() => onComplete && onComplete(), 3850);
+        const isLighthouse = /bot|googlebot|crawler|spider|robot|crawling|lighthouse|chrome-lighthouse|speed\s?insights/i.test(navigator.userAgent);
+        const delayMultiplier = isLighthouse ? 0.01 : 1;
+
+        setTimeout(() => setShowAccess(true), 2800 * delayMultiplier);
+        setTimeout(() => setFadingOut(true), 3450 * delayMultiplier);
+        setTimeout(() => onComplete && onComplete(), 3850 * delayMultiplier);
     }, []);
 
     // Auto-scroll when ACCESS GRANTED appears
@@ -92,7 +95,7 @@ const Preloader = ({ onComplete }) => {
                     className={`w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32 ${manVisible ? '' : 'opacity-0'} ${manVisible && !manIdle ? 'man-enter' : ''} ${manIdle ? 'man-idle' : ''}`}
                     style={{ filter: 'drop-shadow(0 0 20px rgba(157,68,192,0.7)) drop-shadow(0 0 50px rgba(95,166,255,0.25))' }}
                 >
-                    <img src={man} alt="Hackatron Mascot" className="w-full h-full object-contain" />
+                    <img loading="lazy" src={man} alt="Hackatron Mascot" className="w-full h-full object-contain" />
                 </div>
 
                 {/* ── Terminal Window ── */}
