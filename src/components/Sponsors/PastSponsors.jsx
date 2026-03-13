@@ -1,20 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import stars from '../../assets/images/footer/stars.svg';
-import bugseeLogo from '../../assets/images/past_sponsors/bugsee.png';
-import codingBlocksLogo from '../../assets/images/past_sponsors/coding-blocks.png';
-import creativeTimLogo from '../../assets/images/past_sponsors/creative-tim.png';
-import educativeLogo from '../../assets/images/past_sponsors/educative.png';
-import teqipLogo from '../../assets/images/past_sponsors/teqip.png';
-import microsoftLogo from '../../assets/images/past_sponsors/microsoft-azure-new.png';
-import reskilllLogo from '../../assets/images/past_sponsors/reskilll.png';
-import devfolioLogo from '../../assets/images/past_sponsors/devfolio.png';
+import bugseeLogo from '../../assets/images/past_sponsors/bugsee.webp';
+import codingBlocksLogo from '../../assets/images/past_sponsors/coding-blocks.webp';
+import creativeTimLogo from '../../assets/images/past_sponsors/creative-tim.webp';
+import educativeLogo from '../../assets/images/past_sponsors/educative.webp';
+import teqipLogo from '../../assets/images/past_sponsors/teqip.webp';
+import microsoftLogo from '../../assets/images/past_sponsors/microsoft-azure-new.webp';
+import reskilllLogo from '../../assets/images/past_sponsors/reskilll.webp';
+import devfolioLogo from '../../assets/images/past_sponsors/devfolio.webp';
 import ethIndiaLogo from '../../assets/images/past_sponsors/ETH-India.webp';
-import devtownLogo from '../../assets/images/past_sponsors/devtown.jpg';
-import technixLogo from '../../assets/images/past_sponsors/Technix_.jpg';
-import amulLogo from '../../assets/images/past_sponsors/amul.png';
+import devtownLogo from '../../assets/images/past_sponsors/devtown.webp';
+import technixLogo from '../../assets/images/past_sponsors/Technix_.webp';
+import amulLogo from '../../assets/images/past_sponsors/amul.webp';
 import mayaLogo from '../../assets/images/past_sponsors/MAYALOGO.webp';
-import geekRoomLogo from "../../assets/images/past_sponsors/geekRoom.jpeg"
+import geekRoomLogo from "../../assets/images/past_sponsors/geekRoom.webp"
+
+import ProgressiveImage from "../ProgressiveImage";
+
+import bugseeLogoMini from '../../assets/images/past_sponsors/past_sponsors_mini/bugsee.webp';
+import codingBlocksLogoMini from '../../assets/images/past_sponsors/past_sponsors_mini/coding-blocks.webp';
+import creativeTimLogoMini from '../../assets/images/past_sponsors/past_sponsors_mini/creative-tim.webp';
+import educativeLogoMini from '../../assets/images/past_sponsors/past_sponsors_mini/educative.webp';
+import teqipLogoMini from '../../assets/images/past_sponsors/past_sponsors_mini/teqip.webp';
+import microsoftLogoMini from '../../assets/images/past_sponsors/past_sponsors_mini/microsoft-azure-new.webp';
+import reskilllLogoMini from '../../assets/images/past_sponsors/past_sponsors_mini/reskilll.webp';
+import devfolioLogoMini from '../../assets/images/past_sponsors/past_sponsors_mini/devfolio.webp';
+import ethIndiaLogoMini from '../../assets/images/past_sponsors/past_sponsors_mini/ETH-India.webp';
+import devtownLogoMini from '../../assets/images/past_sponsors/past_sponsors_mini/devtown.webp';
+import technixLogoMini from '../../assets/images/past_sponsors/past_sponsors_mini/Technix_.webp';
+import amulLogoMini from '../../assets/images/past_sponsors/past_sponsors_mini/amul.webp';
+import mayaLogoMini from '../../assets/images/past_sponsors/past_sponsors_mini/MAYALOGO.webp';
+import geekRoomLogoMini from "../../assets/images/past_sponsors/past_sponsors_mini/geekRoom.webp"
 
 const PastSponsors = () => {
     const [bgSize, setBgSize] = useState("110%");
@@ -73,20 +90,20 @@ const PastSponsors = () => {
                     <div className='grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 lg:gap-16 justify-center mx-auto w-full px-4 sm:px-8'>
 
                         {[
-                            { link: "https://mayadataprivacy.com/", img: mayaLogo, alt: "Maya Data Privacy", darkBg: true },
-                            { link: "https://www.bugsee.com/", img: bugseeLogo, alt: "Bugsee" },
-                            { link: "https://codingblocks.com/", img: codingBlocksLogo, alt: "Coding Blocks" },
-                            { link: "https://www.creative-tim.com/", img: creativeTimLogo, alt: "Creative Tim" },
-                            { link: "https://www.educative.io/", img: educativeLogo, alt: "Educative" },
-                            { link: "https://www.teqip.in/", img: teqipLogo, alt: "TEQIP" },
-                            { link: "https://www.microsoft.com/", img: microsoftLogo, alt: "Microsoft Azure" },
-                            { link: "https://reskilll.com/", img: reskilllLogo, alt: "Reskilll" },
-                            { link: "https://devfolio.co/", img: devfolioLogo, alt: "Devfolio" },
-                            { link: "https://www.geekroom.in/", img: geekRoomLogo, alt: "Geek Room" },
-                            { link: "https://ethindia.co/", img: ethIndiaLogo, alt: "ETHIndia", darkBg: true },
-                            { link: "https://devtown.in/", img: devtownLogo, alt: "DevTown" },
-                            { link: "https://technix.in/", img: technixLogo, alt: "TechNix" },
-                            { link: "https://www.amul.com/", img: amulLogo, alt: "Amul" },
+                            { link: "https://mayadataprivacy.com/", img: mayaLogo, alt: "Maya Data Privacy", darkBg: true, mini:mayaLogoMini },
+                            { link: "https://www.bugsee.com/", img: bugseeLogo, alt: "Bugsee",mini:bugseeLogoMini },
+                            { link: "https://codingblocks.com/", img: codingBlocksLogo, alt: "Coding Blocks",mini: codingBlocksLogoMini },
+                            { link: "https://www.creative-tim.com/", img: creativeTimLogo, alt: "Creative Tim",mini: creativeTimLogoMini },
+                            { link: "https://www.educative.io/", img: educativeLogo, alt: "Educative",mini:educativeLogoMini },
+                            { link: "https://www.teqip.in/", img: teqipLogo, alt: "TEQIP",mini:teqipLogoMini },
+                            { link: "https://www.microsoft.com/", img: microsoftLogo, alt: "Microsoft Azure",mini:microsoftLogoMini },
+                            { link: "https://reskilll.com/", img: reskilllLogo, alt: "Reskilll",mini:reskilllLogoMini },
+                            { link: "https://devfolio.co/", img: devfolioLogo, alt: "Devfolio",mini: devfolioLogoMini},
+                            { link: "https://www.geekroom.in/", img: geekRoomLogo, alt: "Geek Room",mini: geekRoomLogoMini},
+                            { link: "https://ethindia.co/", img: ethIndiaLogo, alt: "ETHIndia", darkBg: true, mini:ethIndiaLogoMini },
+                            { link: "https://devtown.in/", img: devtownLogo, alt: "DevTown", mini:devtownLogoMini },
+                            { link: "https://technix.in/", img: technixLogo, alt: "TechNix", mini: technixLogoMini},
+                            { link: "https://www.amul.com/", img: amulLogo, alt: "Amul" , mini:amulLogoMini},
 
                         ].map((sponsor, i) => (
                             <div key={i} className='relative group'>
@@ -99,11 +116,14 @@ const PastSponsors = () => {
                                 >
                                     {/* Logo panel — restoring white background, no blue padding */}
                                     <div className="flex items-center justify-center w-full h-full p-3 bg-white rounded-xl shadow-sm overflow-hidden">
-                                        <img
-                                            src={sponsor.img}
-                                            alt={sponsor.alt}
-                                            className={`max-w-full max-h-full w-auto h-auto object-contain transition-all duration-300 ${sponsor.alt === "Microsoft Azure" ? "scale-[1.5]" : ""}`}
-                                            style={{ imageRendering: 'crisp-edges' }}
+                                        <ProgressiveImage
+                                        src={sponsor.img}
+                                        placeholder={sponsor.mini}   // 
+                                        alt={sponsor.alt}
+                                        className={`max-w-full max-h-full w-auto h-auto object-contain transition-all duration-300 ${
+                                            sponsor.alt === "Microsoft Azure" ? "scale-[1.5]" : ""
+                                        }`}
+                                        style={{ imageRendering: "crisp-edges" }}
                                         />
                                     </div>
 

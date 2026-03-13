@@ -63,7 +63,7 @@ function LandingPage() {
 
           {/* Logo / Title */}
           <div className='head-container mt-2 md:mt-4'>
-            <img
+            <img loading="lazy"
               src={head}
               alt="Hackatron 3.0"
               className='imgHead-background'
@@ -81,7 +81,7 @@ function LandingPage() {
 
           {/* Mascot — centered prominently */}
           <div className="home-mascot cursor-pointer hover:scale-105 transition-transform duration-500 mt-2 md:mt-0">
-            <img
+            <img loading="lazy"
               src={/bot|googlebot|crawler|spider|robot|crawling|lighthouse|chrome-lighthouse/i.test(navigator.userAgent) ? HomeMascotStatic : HomeMascot1}
               alt="Hackatron Mascot"
               className="home-mascot-img"
@@ -96,7 +96,7 @@ function LandingPage() {
             className="devfolio-btn -mt-8 md:-mt-12 z-10 relative"
             onClick={() => window.open("https://hackatron3.devfolio.co/")}
           >
-            <img src={DevfolioLogo} alt="Devfolio Logo" />
+            <img loading="lazy" src={DevfolioLogo} alt="Devfolio Logo" />
             <span>Apply with Devfolio</span>
           </button>
 
@@ -108,7 +108,7 @@ function LandingPage() {
           {/* Scroll button */}
           <button className="animate-bounce mb-4 3xl:w-[5%]">
             <a href="#timer" onClick={(e) => { e.preventDefault(); scrollToTimer(); }} aria-label="Scroll down to timer">
-              <img
+              <img loading="lazy"
                 src={ScrollButton}
                 alt="Scroll Down"
                 className="w-12 md:w-14 xl:w-16 mx-auto"

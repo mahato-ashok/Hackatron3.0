@@ -88,8 +88,8 @@ const Tracks = () => {
             // backgroundPosition: `${50 + bgPosition.x}% ${50 + bgPosition.y}%`,
             // backgroundSize: 'cover',
         }}>
-            {/* <img src={stars} className=" z-0 absolute pointer-events-none w-screen opacity-50"></img> */}
-            {/*<img src={trackData[selectedTrack - 1].image} alt="" className='z-1 absolute pointer-events-none left-0 right-0 mx-auto max-w-full xl:-translate-y-48 opacity-50'/>*/}
+            {/* <img loading="lazy" src={stars} className=" z-0 absolute pointer-events-none w-screen opacity-50"></img> */}
+            {/*<img loading="lazy" src={trackData[selectedTrack - 1].image} alt="" className='z-1 absolute pointer-events-none left-0 right-0 mx-auto max-w-full xl:-translate-y-48 opacity-50'/>*/}
             <div className='text-white max-w-[1280px] 3xl:max-w-[2000px] md:mx-8 lg:mx-12 xl:mx-auto z-2'>
                 <h2 className='py-6 md:text-left text-2xl md:text-4xl xl:text-5xl 3xl:text-7xl text-[#9E9E9E]'>$ ls -a <span className='text-white'>TRACKS</span></h2>
                 {/*<div className='lg:flex'>   
@@ -104,23 +104,23 @@ const Tracks = () => {
                         )}
                     </div>
                     <div className="carousel flex items-center gap-5 h-fit self-end">
-                        <img src={left_key} alt="" className='opacity-50 hover:opacity-100'onClick={() => {moveLeft(); if(selectedTrack > 1) handleCardClick(selectedTrack - 1)}}/>
+                        <img loading="lazy" src={left_key} alt="" className='opacity-50 hover:opacity-100'onClick={() => {moveLeft(); if(selectedTrack > 1) handleCardClick(selectedTrack - 1)}}/>
                         <div className='tracks-wrapper flex gap-5 lg:max-w-[480px] 3xl:max-w-[1000px] overflow-x-auto scroll-smooth no-scrollbar' id='slider'>
                             {trackData.map((track) => (
                                 <div key={track.id} className="card min-w-24 sm:min-w-36 3xl:min-w-40 grid place-items-center relative" onClick={() => handleCardClick(track.id)}>
-                                    <img src={track.card} alt="" className='opacity-70 3xl:min-w-40'/>
+                                    <img loading="lazy" src={track.card} alt="" className='opacity-70 3xl:min-w-40'/>
                                     <h4 className='absolute text-lg md:text-2xl left-0 top-0 right-0 bottom-0 m-auto w h-fit text-center px-4'>{track.title}</h4>
                                 </div>
                             ))}
                         </div>
-                        <img src={right_key} alt="" className='opacity-50 hover:opacity-100' onClick={() => {moveRight(); handleCardClick((selectedTrack % 6) + 1)}}/>
+                        <img loading="lazy" src={right_key} alt="" className='opacity-50 hover:opacity-100' onClick={() => {moveRight(); handleCardClick((selectedTrack % 6) + 1)}}/>
                     </div>
                 </div>*/}
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                    <img src={comingSoon} alt="Coming Soon" style={{ width: "80%" }}></img>
+                    <img loading="lazy" src={comingSoon} alt="Coming Soon" style={{ width: "80%" }}></img>
                     <div style={{ display: "flex", justifyContent: "center" }}>
-                        <img src={chest} alt="Mascot" style={{ width: "40%", objectFit: "contain" }}></img>
-                        <img src={man} alt="Mascot" style={{ width: "20%", objectFit: "contain" }}></img>
+                        <img loading="lazy" src={chest} alt="Mascot" style={{ width: "40%", objectFit: "contain" }}></img>
+                        <img loading="lazy" src={man} alt="Mascot" style={{ width: "20%", objectFit: "contain" }}></img>
                     </div>
                 </div>
                 {/*<div className='px-12 text-white mt-8 text-xl md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl'>Every track winner will get prizes worth <span className=''>$</span>150 including ₹2000 cash prize, swags, and additional sponsor benefits</div>*/}

@@ -1,4 +1,4 @@
-/* Slider.css */
+/*/* Slider.css 
 .sliders-wrapper {
   display: flex;
   flex-direction: column;
@@ -7,8 +7,8 @@
 
 .slider-container {
   overflow: hidden;
-  /* width: 200vw; */
-  /* position: relative; */
+  /* width: 200vw;
+  /* position: relative;
   z-index: 1;
 }
 
@@ -63,4 +63,4 @@
 .slide-image {
   max-width: 100%;
   height: auto;
-}
+}*/

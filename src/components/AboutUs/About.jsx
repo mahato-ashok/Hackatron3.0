@@ -54,13 +54,13 @@ const About = () => {
               "
             >
 
-              <img
+              <img loading="lazy"
                 src={aboutPixel2}
                 alt="pixel decoration"
                 className="about-pixel about-pixel--top-left"
               />
 
-              <img
+              <img loading="lazy"
                 src={aboutPixel}
                 alt="pixel decoration"
                 className="about-pixel about-pixel--bottom-right"

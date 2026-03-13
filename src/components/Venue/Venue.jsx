@@ -1,6 +1,8 @@
 import stars from "../../assets/images/discord/stars.svg";
 import React, { useState, useEffect } from "react";
 
+import ProgressiveImage from "../ProgressiveImage";
+
 const Venue = () => {
   const [bgPosition, setBgPosition] = useState({ x: 0, y: 0 });
 
@@ -38,11 +40,10 @@ const Venue = () => {
           <div className="space-y-8">
 
             <div className="group flex gap-6 items-start border-[6px] max-lg:border-4 border-dashed border-[#7f7cff] bg-[#050826]/30 backdrop-blur-[1px] p-6 md:p-8 transition-all duration-300 hover:shadow-[0_0_45px_rgba(127,124,255,0.45)] hover:-translate-y-1">
-              <img
-                src="/images/Venue.webp"
+              <ProgressiveImage  src="/images/Destination/Venue.webp"
                 alt="venue"
                 className="w-16 h-16 md:w-20 md:h-20 pixelated object-contain"
-              />
+                placeholder = "/images/Destination/DestinationMini/Venue.webp"/>
               <div>
                 <h3 className="text-pink-400 text-2xl md:text-3xl xl:text-4xl tracking-wide mb-2">
                   Venue
@@ -56,11 +57,11 @@ const Venue = () => {
             </div>
 
             <div className="group flex gap-6 items-start border-[6px] max-lg:border-4 border-dashed border-[#0384fc] bg-[#050826]/30 backdrop-blur-[1px] p-6 md:p-8 transition-all duration-300 hover:shadow-[0_0_45px_rgba(3,132,252,0.45)] hover:-translate-y-1">
-              <img
-                src="/images/Date.webp"
+              <ProgressiveImage
+              src="/images/Destination/Date.webp"
                 alt="date & Time"
                 className="w-16 h-16 md:w-20 md:h-20 pixelated object-contain"
-              />
+                placeholder = "/images/Destination/DestinationMini/Date.webp"/>
               <div>
                 <h3 className="text-pink-400 text-2xl md:text-3xl xl:text-4xl tracking-wide mb-2">
                   Date & Time
@@ -74,11 +75,11 @@ const Venue = () => {
             </div>
 
             <div className="group flex gap-6 items-start border-[6px] max-lg:border-4 border-dashed border-purple bg-[#050826]/30 backdrop-blur-[1px] p-6 md:p-8 transition-all duration-300 hover:shadow-[0_0_45px_rgba(168,85,247,0.45)] hover:-translate-y-1">
-              <img
-                src="/images/Join.webp"
+              <ProgressiveImage
+              src="/images/Destination/Join.webp"
                 alt="Why Join"
                 className="w-16 h-16 md:w-20 md:h-20 pixelated object-contain"
-              />
+                placeholder = "/images/Destination/DestinationMini/Join.webp"/>
               <div>
                 <h3 className="text-pink-400 text-2xl md:text-3xl xl:text-4xl tracking-wide mb-2">
                   Why Join?

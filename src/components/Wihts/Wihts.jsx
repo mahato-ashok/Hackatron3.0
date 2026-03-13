@@ -62,13 +62,13 @@ const Whits = () => {
   "
             >
 
-              <img
+              <img loading="lazy"
                 src={Wihts}
                 alt="What is Hackatron decoration"
                 className="wihts-pixel wihts-pixel--top-left"
               />
 
-              <img
+              <img loading="lazy"
                 src={Wihts1}
                 alt="Hackatron arcade"
                 className="wihts-arcade"

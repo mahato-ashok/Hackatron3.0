@@ -31,7 +31,7 @@ function Footer() {
             <div className='main-footer'>
                 <div className='footer-container relative overflow-hidden'>
                     {/* Background Image */}
-                    <img src={footer} alt="footer background" className='img-background relative z-0' loading="lazy" decoding="async" />
+                    <img loading="lazy" src={footer} alt="footer background" className='img-background relative z-0' decoding="async" />
 
                     {/* Falling Leaves Overlay - Above background, behind content */}
                     <div className="absolute inset-0 z-[5] pointer-events-none">
@@ -73,13 +73,13 @@ function Footer() {
                                     </h2>
                                     <div className="flex justify-center gap-5 md:gap-7 mt-1 md:mt-2">
                                         <a href="https://www.instagram.com/hnccbits?igsh=MXE5ZXcxOGFwMGplbA==" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
-                                            <img className="sociallogos insta_logo brightness-0 invert-[1] hover:filter-none w-auto h-auto max-w-[22px] md:max-w-[28px] 3xl:max-w-[60px]" src={instaLogo} alt="insta_logo" />
+                                            <img loading="lazy" className="sociallogos insta_logo brightness-0 invert-[1] hover:filter-none w-auto h-auto max-w-[22px] md:max-w-[28px] 3xl:max-w-[60px]" src={instaLogo} alt="insta_logo" />
                                         </a>
                                         <a href="https://x.com/hnccbits" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
-                                            <img className="twitter_logo sociallogos brightness-0 invert-[1] hover:invert-[0.5] w-auto h-auto max-w-[22px] md:max-w-[28px] 3xl:max-w-[60px]" src={twitterLogo} alt="twitter_logo" />
+                                            <img loading="lazy" className="twitter_logo sociallogos brightness-0 invert-[1] hover:invert-[0.5] w-auto h-auto max-w-[22px] md:max-w-[28px] 3xl:max-w-[60px]" src={twitterLogo} alt="twitter_logo" />
                                         </a>
                                         <a href="https://www.linkedin.com/company/hnccbits/" target="_blank" rel="noopener noreferrer" className="relative hover:scale-110 transition-transform flex items-center justify-center">
-                                            <img className="sociallogos linkedin_logo w-auto h-auto max-w-[22px] md:max-w-[28px] 3xl:max-w-[60px] peer z-10 brightness-0 invert-[1] hover:filter-none" src={linkedinLogo} alt="linkedin_logo" />
+                                            <img loading="lazy" className="sociallogos linkedin_logo w-auto h-auto max-w-[22px] md:max-w-[28px] 3xl:max-w-[60px] peer z-10 brightness-0 invert-[1] hover:filter-none" src={linkedinLogo} alt="linkedin_logo" />
                                             <div className="w-[70%] h-[75%] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 peer-hover:bg-white z-0"></div>
                                         </a>
                                     </div>

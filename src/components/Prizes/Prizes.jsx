@@ -32,7 +32,7 @@ const Prizes = () => {
                 // backgroundSize: 'cover',
             }}
         >
-            {/* <img
+            {/* <img loading="lazy"
                 src={prizesbg}
                 alt=""
                 className="absolute w-full h-full object-cover top-0 left-0"
@@ -57,7 +57,7 @@ const Prizes = () => {
                             <div className="flex items-end h-full">
                                 {/* Image container */}
                                 <div className="relative w-full h-full flex px-2 pt-2">
-                                    <img src={win1} alt="Image 1" />
+                                    <img loading="lazy" src={win1} alt="Image 1" />
                                 </div>
                             </div>
                         </div>
@@ -74,7 +74,7 @@ const Prizes = () => {
                                 <div className="flex items-end h-24 xs:h-auto">
                                     {/* Image container */}
                                     <div className="relative w-full h-full flex px-2 pt-2">
-                                        <img src={win2} alt="Image 2" className="object-contain h-full" />
+                                        <img loading="lazy" src={win2} alt="Image 2" className="object-contain h-full" />
                                     </div>
                                 </div>
                             </div>
@@ -89,7 +89,7 @@ const Prizes = () => {
                                 <div className="flex items-end h-24 xs:h-auto">
                                     {/* Image container */}
                                     <div className="relative w-full h-full flex px-2 pt-2">
-                                        <img src={win3} alt="Image 3" className="object-contain h-full" />
+                                        <img loading="lazy" src={win3} alt="Image 3" className="object-contain h-full" />
                                     </div>
                                 </div>
                             </div>
