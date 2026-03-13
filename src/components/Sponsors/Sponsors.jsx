@@ -26,6 +26,7 @@ import routerLogo from '../../assets/images/sponsors/router.svg';*/
 import devfolioLogo2026 from '../../assets/images/Sponsors2026/Devfolio-logo.png';
 import codeCrafterLogo2026 from '../../assets/images/Sponsors2026/CodeCrafters-logo.png';
 import sybgenLogo2026 from '../../assets/images/Sponsors2026/SYBGEN-logo.jpg';
+import interviewCakeLogo from '../../assets/images/Sponsors2026/interview_cake.png';
 
 const Sponsors = () => {
     const [bgSize, setBgSize] = useState("110%");
@@ -108,7 +109,7 @@ const Sponsors = () => {
                 {/* GOLD */}
                 <div className='pt-3 3xl:pt-10 pb-12 border-dashed border-[#e29b29] border-b-[0.1rem] sm:border-b-[0.5rem] md:pt-4 w-[80vw] xl:w-[65vw] 2xl:w-full mx-auto flex flex-col items-center justify-center gap-5 lg:gap-8'>
                     <h3 className='font-vt323 font-medium text-[#e29b29] text-[9vw] leading-[5vw] sm:leading-[3.5rem] sm:text-[7vw] lg:text-[6vw] lg:leading-[3rem] xl:text-[5vw] xl:leading-[5rem] 3xl:text-[4vw]'>GOLD</h3>
-                    <div className='flex flex-wrap flex-col sm:flex-row items-center justify-center gap-8 sm:gap-x-32 px-12'>
+                    <div className='flex flex-wrap justify-center items-center gap-8 px-12'>
                         <div className='relative group'>
                             <Link to='https://devfolio.co/' target="_blank" rel="noopener noreferrer" className="relative flex flex-col items-center justify-center w-[60vw] h-[100px] sm:w-[15vw] sm:h-[120px] 3xl:w-[15rem] transition-all duration-300 hover:scale-105">
                                 <div className="flex items-center justify-center w-full h-full p-4 bg-white rounded-2xl shadow-[0_0_25px_rgba(226,155,41,0.3)] hover:shadow-[0_0_25px_rgba(226,155,41,0.7)] transition-all duration-300 overflow-hidden">
@@ -125,7 +126,7 @@ const Sponsors = () => {
                 {/* SILVER */}
                 <div className='pt-3 3xl:pt-10 pb-12 border-dashed border-[#9e9e9e] border-b-[0.1rem] sm:border-b-[0.5rem] md:pt-4 w-[80vw] xl:w-[65vw] 2xl:w-full mx-auto flex flex-col items-center justify-center gap-5 lg:gap-8'>
                     <h3 className='font-vt323 font-medium text-[#9e9e9e] text-[9vw] leading-[5vw] sm:leading-[3.5rem] sm:text-[7vw] lg:text-[6vw] lg:leading-[3rem] xl:text-[5vw] xl:leading-[5rem] 3xl:text-[4vw]'>SILVER</h3>
-                    <div className='flex flex-wrap flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16 px-12 2xl:px-24'>
+                    <div className='flex flex-wrap justify-center items-center gap-8 px-12 2xl:px-24'>
                         <div className='relative group'>
                             <Link to='https://codecrafters.io/' target="_blank" rel="noopener noreferrer" className="relative flex flex-col items-center justify-center w-[60vw] h-[100px] sm:w-[15vw] sm:h-[120px] 3xl:w-[15rem] transition-all duration-300 hover:scale-105">
                                 <div className="flex items-center justify-center w-full h-full p-4 bg-white rounded-2xl shadow-[0_0_25px_rgba(158,158,158,0.3)] hover:shadow-[0_0_25px_rgba(158,158,158,0.7)] transition-all duration-300 overflow-hidden">
@@ -142,7 +143,7 @@ const Sponsors = () => {
                 {/* PARTNER */}
                 <div className='pt-3 3xl:pt-10 pb-12 md:pt-4 w-[80vw] xl:w-[65vw] 2xl:w-full mx-auto flex flex-col items-center justify-center gap-5 lg:gap-8'>
                     <h3 className='font-vt323 font-medium text-[#9d44c0] text-[9vw] leading-[5vw] sm:leading-[3.5rem] sm:text-[7vw] lg:text-[6vw] lg:leading-[3rem] xl:text-[5vw] xl:leading-[5rem] 3xl:text-[4vw]'>PARTNER</h3>
-                    <div className='flex flex-wrap flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16 px-12 max-sm:mb-4'>
+                    <div className='flex flex-wrap justify-center items-center gap-8 px-12 max-sm:mb-4'>
                         <div className='relative group'>
                             <Link to='https://sybgen.com/' target="_blank" rel="noopener noreferrer" className="relative flex flex-col items-center justify-center w-[60vw] h-[100px] sm:w-[15vw] sm:h-[120px] 3xl:w-[15rem] transition-all duration-300 hover:scale-105">
                                 <div className="flex items-center justify-center w-full h-full p-4 bg-white rounded-2xl shadow-[0_0_25px_rgba(157,68,192,0.3)] hover:shadow-[0_0_25px_rgba(157,68,192,0.7)] transition-all duration-300 overflow-hidden">
@@ -150,6 +151,16 @@ const Sponsors = () => {
                                 </div>
                                 <div className="absolute top-full left-0 right-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 pt-3 z-10">
                                     <p className="font-vt323 text-[#ec53b0] text-lg md:text-xl tracking-widest text-center px-1 whitespace-nowrap bg-black/40 rounded">SYBGEN</p>
+                                </div>
+                            </Link>
+                        </div>
+                        <div className='relative group'>
+                            <Link to='https://www.interviewcake.com/' target="_blank" rel="noopener noreferrer" className="relative flex flex-col items-center justify-center w-[60vw] h-[100px] sm:w-[15vw] sm:h-[120px] 3xl:w-[15rem] transition-all duration-300 hover:scale-105">
+                                <div className="flex items-center justify-center w-full h-full p-4 bg-white rounded-2xl shadow-[0_0_25px_rgba(157,68,192,0.3)] hover:shadow-[0_0_25px_rgba(157,68,192,0.7)] transition-all duration-300 overflow-hidden">
+                                    <img src={interviewCakeLogo} alt="INTERVIEW CAKE LOGO" width={1000} height={1000} className='max-w-full max-h-full w-auto h-auto object-contain' />
+                                </div>
+                                <div className="absolute top-full left-0 right-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 pt-3 z-10">
+                                    <p className="font-vt323 text-[#ec53b0] text-lg md:text-xl tracking-widest text-center px-1 whitespace-nowrap bg-black/40 rounded">INTERVIEW CAKE</p>
                                 </div>
                             </Link>
                         </div>
