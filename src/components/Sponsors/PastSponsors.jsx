@@ -16,7 +16,7 @@ import amulLogo from '../../assets/images/past_sponsors/amul.webp';
 import mayaLogo from '../../assets/images/past_sponsors/MAYALOGO.webp';
 import geekRoomLogo from "../../assets/images/past_sponsors/geekRoom.webp"
 import CCLLogo from "../../assets/images/past_sponsors/CCL-logo.webp"
-import BITSAALogo from "../../assets/images/past_sponsors/Bitsaana-logo.webp"
+import BITSAALogo from "../../assets/images/past_sponsors/Bitsaa-logo.webp"
 
 import ProgressiveImage from "../ProgressiveImage";
 
@@ -35,6 +35,7 @@ import amulLogoMini from '../../assets/images/past_sponsors/past_sponsors_mini/a
 import mayaLogoMini from '../../assets/images/past_sponsors/past_sponsors_mini/MAYALOGO.webp';
 import CCLLogoMini from "../../assets/images/past_sponsors/past_sponsors_mini/CCL-logo.webp"
 import geekRoomLogoMini from "../../assets/images/past_sponsors/past_sponsors_mini/geekRoom.webp"
+import BITSAALogoMini from "../../assets/images/past_sponsors/past_sponsors_mini/bitsaa-logo.webp"
 
 const PastSponsors = () => {
     const [bgSize, setBgSize] = useState("110%");
@@ -95,7 +96,7 @@ const PastSponsors = () => {
                         {[
                             { link: "https://mayadataprivacy.com/", img: mayaLogo, alt: "Maya Data Privacy", darkBg: true, mini:mayaLogoMini },
                             { link: "https://www.centralcoalfields.in/", img: CCLLogo, alt: "Central Coal Fields" , mini:CCLLogoMini},
-                            { link: "https://www.bitsaa.in/", img: BITSAALogo, alt: "BITSAA" , mini:amulLogoMini},
+                            { link: "https://www.bitsaa.in/", img: BITSAALogo, alt: "BITSAA" , mini:BITSAALogoMini},
                             { link: "https://technix.in/", img: technixLogo, alt: "TechNix", mini: technixLogoMini},
                             { link: "https://www.amul.com/", img: amulLogo, alt: "Amul" , mini:amulLogoMini},
                             { link: "https://devfolio.co/", img: devfolioLogo, alt: "Devfolio",mini: devfolioLogoMini},
