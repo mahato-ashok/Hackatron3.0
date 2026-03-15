@@ -15,6 +15,8 @@ import technixLogo from '../../assets/images/past_sponsors/Technix_.webp';
 import amulLogo from '../../assets/images/past_sponsors/amul.webp';
 import mayaLogo from '../../assets/images/past_sponsors/MAYALOGO.webp';
 import geekRoomLogo from "../../assets/images/past_sponsors/geekRoom.webp"
+import CCLLogo from "../../assets/images/past_sponsors/CCL-logo.webp"
+import BITSAALogo from "../../assets/images/past_sponsors/Bitsaa-logo.webp"
 
 import ProgressiveImage from "../ProgressiveImage";
 
@@ -31,7 +33,9 @@ import devtownLogoMini from '../../assets/images/past_sponsors/past_sponsors_min
 import technixLogoMini from '../../assets/images/past_sponsors/past_sponsors_mini/Technix_.webp';
 import amulLogoMini from '../../assets/images/past_sponsors/past_sponsors_mini/amul.webp';
 import mayaLogoMini from '../../assets/images/past_sponsors/past_sponsors_mini/MAYALOGO.webp';
+import CCLLogoMini from "../../assets/images/past_sponsors/past_sponsors_mini/CCL-logo.webp"
 import geekRoomLogoMini from "../../assets/images/past_sponsors/past_sponsors_mini/geekRoom.webp"
+import BITSAALogoMini from "../../assets/images/past_sponsors/past_sponsors_mini/bitsaa-logo.webp"
 
 const PastSponsors = () => {
     const [bgSize, setBgSize] = useState("110%");
@@ -91,20 +95,21 @@ const PastSponsors = () => {
 
                         {[
                             { link: "https://mayadataprivacy.com/", img: mayaLogo, alt: "Maya Data Privacy", darkBg: true, mini:mayaLogoMini },
-                            { link: "https://www.bugsee.com/", img: bugseeLogo, alt: "Bugsee",mini:bugseeLogoMini },
-                            { link: "https://codingblocks.com/", img: codingBlocksLogo, alt: "Coding Blocks",mini: codingBlocksLogoMini },
-                            { link: "https://www.creative-tim.com/", img: creativeTimLogo, alt: "Creative Tim",mini: creativeTimLogoMini },
-                            { link: "https://www.educative.io/", img: educativeLogo, alt: "Educative",mini:educativeLogoMini },
-                            { link: "https://www.teqip.in/", img: teqipLogo, alt: "TEQIP",mini:teqipLogoMini },
-                            { link: "https://www.microsoft.com/", img: microsoftLogo, alt: "Microsoft Azure",mini:microsoftLogoMini },
-                            { link: "https://reskilll.com/", img: reskilllLogo, alt: "Reskilll",mini:reskilllLogoMini },
-                            { link: "https://devfolio.co/", img: devfolioLogo, alt: "Devfolio",mini: devfolioLogoMini},
-                            { link: "https://www.geekroom.in/", img: geekRoomLogo, alt: "Geek Room",mini: geekRoomLogoMini},
-                            { link: "https://ethindia.co/", img: ethIndiaLogo, alt: "ETHIndia", darkBg: true, mini:ethIndiaLogoMini },
-                            { link: "https://devtown.in/", img: devtownLogo, alt: "DevTown", mini:devtownLogoMini },
+                            { link: "https://www.centralcoalfields.in/", img: CCLLogo, alt: "Central Coal Fields" , mini:CCLLogoMini},
+                            { link: "https://www.bitsaa.in/", img: BITSAALogo, alt: "BITSAA" , mini:BITSAALogoMini},
                             { link: "https://technix.in/", img: technixLogo, alt: "TechNix", mini: technixLogoMini},
                             { link: "https://www.amul.com/", img: amulLogo, alt: "Amul" , mini:amulLogoMini},
-
+                            { link: "https://devfolio.co/", img: devfolioLogo, alt: "Devfolio",mini: devfolioLogoMini},
+                            { link: "https://ethindia.co/", img: ethIndiaLogo, alt: "ETHIndia", darkBg: true, mini:ethIndiaLogoMini },
+                            { link: "https://www.educative.io/", img: educativeLogo, alt: "Educative",mini:educativeLogoMini },
+                            { link: "https://www.microsoft.com/", img: microsoftLogo, alt: "Microsoft Azure",mini:microsoftLogoMini },
+                            // { link: "https://www.bugsee.com/", img: bugseeLogo, alt: "Bugsee",mini:bugseeLogoMini },
+                            // { link: "https://codingblocks.com/", img: codingBlocksLogo, alt: "Coding Blocks",mini: codingBlocksLogoMini },
+                            // { link: "https://www.creative-tim.com/", img: creativeTimLogo, alt: "Creative Tim",mini: creativeTimLogoMini },
+                            { link: "https://www.teqip.in/", img: teqipLogo, alt: "TEQIP",mini:teqipLogoMini },
+                            { link: "https://reskilll.com/", img: reskilllLogo, alt: "Reskilll",mini:reskilllLogoMini },
+                            { link: "https://www.geekroom.in/", img: geekRoomLogo, alt: "Geek Room",mini: geekRoomLogoMini},
+                            { link: "https://devtown.in/", img: devtownLogo, alt: "DevTown", mini:devtownLogoMini },
                         ].map((sponsor, i) => (
                             <div key={i} className='relative group'>
                                 <Link
