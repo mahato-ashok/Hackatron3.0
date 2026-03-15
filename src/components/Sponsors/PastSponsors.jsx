@@ -16,7 +16,7 @@ import amulLogo from '../../assets/images/past_sponsors/amul.webp';
 import mayaLogo from '../../assets/images/past_sponsors/MAYALOGO.webp';
 import geekRoomLogo from "../../assets/images/past_sponsors/geekRoom.webp"
 import CCLLogo from "../../assets/images/past_sponsors/CCL-logo.webp"
-import BITSAALogo from "../../assets/images/past_sponsors/Bitsaa-logo.webp"
+import BITSAALogo from "../../assets/images/past_sponsors/bitsaa-logo.webp"
 
 import ProgressiveImage from "../ProgressiveImage";
 
@@ -94,22 +94,22 @@ const PastSponsors = () => {
                     <div className='grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 lg:gap-16 justify-center mx-auto w-full px-4 sm:px-8'>
 
                         {[
-                            { link: "https://mayadataprivacy.com/", img: mayaLogo, alt: "Maya Data Privacy", darkBg: true, mini:mayaLogoMini },
-                            { link: "https://www.centralcoalfields.in/", img: CCLLogo, alt: "Central Coal Fields" , mini:CCLLogoMini},
-                            { link: "https://www.bitsaa.in/", img: BITSAALogo, alt: "BITSAA" , mini:BITSAALogoMini},
-                            { link: "https://technix.in/", img: technixLogo, alt: "TechNix", mini: technixLogoMini},
-                            { link: "https://www.amul.com/", img: amulLogo, alt: "Amul" , mini:amulLogoMini},
-                            { link: "https://devfolio.co/", img: devfolioLogo, alt: "Devfolio",mini: devfolioLogoMini},
-                            { link: "https://ethindia.co/", img: ethIndiaLogo, alt: "ETHIndia", darkBg: true, mini:ethIndiaLogoMini },
-                            { link: "https://www.educative.io/", img: educativeLogo, alt: "Educative",mini:educativeLogoMini },
-                            { link: "https://www.microsoft.com/", img: microsoftLogo, alt: "Microsoft Azure",mini:microsoftLogoMini },
-                            // { link: "https://www.bugsee.com/", img: bugseeLogo, alt: "Bugsee",mini:bugseeLogoMini },
-                            // { link: "https://codingblocks.com/", img: codingBlocksLogo, alt: "Coding Blocks",mini: codingBlocksLogoMini },
-                            // { link: "https://www.creative-tim.com/", img: creativeTimLogo, alt: "Creative Tim",mini: creativeTimLogoMini },
-                            { link: "https://www.teqip.in/", img: teqipLogo, alt: "TEQIP",mini:teqipLogoMini },
-                            { link: "https://reskilll.com/", img: reskilllLogo, alt: "Reskilll",mini:reskilllLogoMini },
-                            { link: "https://www.geekroom.in/", img: geekRoomLogo, alt: "Geek Room",mini: geekRoomLogoMini},
-                            { link: "https://devtown.in/", img: devtownLogo, alt: "DevTown", mini:devtownLogoMini },
+                            { link: "https://mayadataprivacy.com/", img: mayaLogo, alt: "Maya Data Privacy", darkBg: true, mini: mayaLogoMini },
+                            { link: "https://www.centralcoalfields.in/", img: CCLLogo, alt: "Central Coal Fields", mini: CCLLogoMini },
+                            { link: "https://www.bitsaa.in/", img: BITSAALogo, alt: "BITSAA", mini: BITSAALogoMini },
+                            { link: "https://technix.in/", img: technixLogo, alt: "TechNix", mini: technixLogoMini },
+                            { link: "https://www.amul.com/", img: amulLogo, alt: "Amul", mini: amulLogoMini },
+                            { link: "https://devfolio.co/", img: devfolioLogo, alt: "Devfolio", mini: devfolioLogoMini },
+                            { link: "https://ethindia.co/", img: ethIndiaLogo, alt: "ETHIndia", darkBg: true, mini: ethIndiaLogoMini },
+                            { link: "https://www.educative.io/", img: educativeLogo, alt: "Educative", mini: educativeLogoMini },
+                            { link: "https://www.microsoft.com/", img: microsoftLogo, alt: "Microsoft Azure", mini: microsoftLogoMini },
+                            { link: "https://www.teqip.in/", img: teqipLogo, alt: "TEQIP", mini: teqipLogoMini },
+                            { link: "https://reskilll.com/", img: reskilllLogo, alt: "Reskilll", mini: reskilllLogoMini },
+                            { link: "https://www.geekroom.in/", img: geekRoomLogo, alt: "Geek Room", mini: geekRoomLogoMini },
+                            { link: "https://devtown.in/", img: devtownLogo, alt: "DevTown", mini: devtownLogoMini },
+                            { link: "https://www.bugsee.com/", img: bugseeLogo, alt: "Bugsee", mini: bugseeLogoMini },
+                            { link: "https://codingblocks.com/", img: codingBlocksLogo, alt: "Coding Blocks", mini: codingBlocksLogoMini },
+                            { link: "https://www.creative-tim.com/", img: creativeTimLogo, alt: "Creative Tim", mini: creativeTimLogoMini },
                         ].map((sponsor, i) => (
                             <div key={i} className='relative group'>
                                 <Link
@@ -122,13 +122,12 @@ const PastSponsors = () => {
                                     {/* Logo panel — restoring white background, no blue padding */}
                                     <div className="flex items-center justify-center w-full h-full p-3 bg-white rounded-xl shadow-sm overflow-hidden">
                                         <ProgressiveImage
-                                        src={sponsor.img}
-                                        placeholder={sponsor.mini}   // 
-                                        alt={sponsor.alt}
-                                        className={`max-w-full max-h-full w-auto h-auto object-contain transition-all duration-300 ${
-                                            sponsor.alt === "Microsoft Azure" ? "scale-[1.5]" : ""
-                                        }`}
-                                        style={{ imageRendering: "crisp-edges" }}
+                                            src={sponsor.img}
+                                            placeholder={sponsor.mini}   // 
+                                            alt={sponsor.alt}
+                                            className={`max-w-full max-h-full w-auto h-auto object-contain transition-all duration-300 ${sponsor.alt === "Microsoft Azure" ? "scale-[1.5]" : ""
+                                                }`}
+                                            style={{ imageRendering: "crisp-edges" }}
                                         />
                                     </div>
 
