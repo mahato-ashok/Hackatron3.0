@@ -40,6 +40,7 @@ export default function Navbar() {
             footerSection.scrollIntoView({ behavior: 'smooth' });
         }
     };
+    
 
 
 
@@ -61,7 +62,7 @@ export default function Navbar() {
     };
 
     const scrollToTeams = () => {
-        window.open("https://www.hnccbits.com/teams", "_blank");
+        window.location.href="https://www.hnccbits.com/teams#particular-section";
     };
 
 
@@ -104,10 +105,13 @@ export default function Navbar() {
                             key={item.name}
                             href={item.href}
                             onClick={(e) => {
-                                if (item.name !== 'TEAMS') {
-                                    e.preventDefault();
-                                    item.func();
-                                }
+                               if (item.name !== 'TEAMS') {
+                                e.preventDefault();  // Scroll ke liye preventDefault
+                                item.func();
+                              } else {
+                               // TEAMS ke liye naya page open kare same tab me
+                             item.func();
+                               }
                             }}
                         >
                             <li className="nav-pixel-link hover:text-[#39FF14] cursor-pointer transition-colors duration-200 uppercase">
