@@ -63,7 +63,9 @@ function Footer() {
                                         <a href="/brochure/Hackatron3.0.pdf" download="Hackatron3.0.pdf" className="footercontent resourcecontent text-[#BEBEBE] hover:text-white drop-shadow-md" target="_blank" rel="noopener noreferrer">
                                             Sponsorship Brochure
                                         </a>
-
+                                        <a href="/rulebook/rulebook.pdf" download="rulebook.pdf" className="footercontent resourcecontent text-[#BEBEBE] hover:text-white drop-shadow-md" target="_blank" rel="noopener noreferrer">
+                                            Rulebook
+                                        </a>
                                     </div>
                                 </div>
                                 {/* STAY CONNECTED */}
