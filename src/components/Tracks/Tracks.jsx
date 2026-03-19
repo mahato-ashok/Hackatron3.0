@@ -2,18 +2,18 @@ import React, { useState, useEffect } from 'react';
 import stars from '../../assets/images/discord/stars.svg';
 import left_key from '../../assets/images/left_key.svg';
 import right_key from '../../assets/images/right_key.svg';
-import medical from '../../assets/images/tracks/medical.png';
-import medical_card from '../../assets/images/tracks/medical_card.png';
-import wildlife from '../../assets/images/tracks/wildlife.png';
-import wildlife_card from '../../assets/images/tracks/wildlife_card.png';
-import hardware_card from '../../assets/images/tracks/hardware_card.png';
-import hardware from '../../assets/images/tracks/hardware.png';
-import open_innovation_card from '../../assets/images/tracks/open_innovation_card.png';
-import open_innovation from '../../assets/images/tracks/open_innovation.png';
-import education_card from '../../assets/images/tracks/education_card.png';
-import education from '../../assets/images/tracks/education.png';
-import web3_card from '../../assets/images/tracks/web3_card.png';
-import web3 from '../../assets/images/tracks/web3.png';
+import medical from '../../assets/images/tracks/medical.webp';
+import medical_card from '../../assets/images/tracks/medical_card.webp';
+import wildlife from '../../assets/images/tracks/wildlife.webp';
+import wildlife_card from '../../assets/images/tracks/wildlife_card.webp';
+import hardware_card from '../../assets/images/tracks/hardware_card.webp';
+import hardware from '../../assets/images/tracks/hardware.webp';
+import open_innovation_card from '../../assets/images/tracks/open_innovation_card.webp';
+import open_innovation from '../../assets/images/tracks/open_innovation.webp';
+import education_card from '../../assets/images/tracks/education_card.webp';
+import education from '../../assets/images/tracks/education.webp';
+import web3_card from '../../assets/images/tracks/web3_card.webp';
+import web3 from '../../assets/images/tracks/web3.webp';
 
 
 
@@ -30,7 +30,8 @@ const Tracks = () => {
         { id: 4, title: 'EDUCATION', description: 'Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui. Praesent commodo cursus magna, vel scelerisque nisl consectetur. ', image: education, card: education_card },
         */
         { id: 5, title: 'WEB3', description: 'Design and develop a secure and scalable platform that enables P2P, B2B, and merchant payment acceptance using stablecoins. The solution should support features such as QR code–based payments, wallet integration, real-time transaction monitoring, and automated settlement confirmation to ensure fast, transparent, and reliable transactions. In the Indian market, small and medium enterprises often face high transaction fees and delays in cross-border payments; a stablecoin-powered system can help reduce costs, enable faster settlements, and simplify global remittances, making digital payments more efficient and accessible for businesses and individuals.', image: web3, card: web3_card },
-        { id: 6, title: 'COMING SOON', description: 'More problem statements will be revealed soon! Stay tuned for exciting challenges across other domains.', image: web3, card: web3_card }, // Reusing web3 assets as a placeholder since others weren't explicitly provided for "coming soon"
+        { id: 6, title: 'iNSIGHTS AI Productivity Track', description: 'This track challenges participants to build an integrated AI-powered system that transforms fragmented workflows into a seamless execution pipeline. Using the iNSIGHTS ecosystem, teams will move from idea generation to deep research, project creation, content generation, and learning within a unified platform. The goal is to enable faster, smarter execution by combining multiple AI capabilities into a single efficient workflow that enhances productivity for students, developers, and creators.', image: education, card: education_card, pdf: '/tracks/iNSIGHTS_Hackatron3.0_Track.pdf' },
+        { id: 7, title: 'COMING SOON', description: 'More problem statements will be revealed soon! Stay tuned for exciting challenges across other domains.', image: web3, card: web3_card }, // Reusing web3 assets as a placeholder since others weren't explicitly provided for "coming soon"
         /*
         { id: 6, title: 'OPEN INNOVATION', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. ', image: open_innovation, card: open_innovation_card },
         // Add more tracks here...
@@ -97,8 +98,21 @@ const Tracks = () => {
                     <div className="track-section pl-12 xl:w-1/2 mr-5 mb-5 xl:mb-0" >
                         {currentTrack ? (
                             <div className='track'>
-                                <h2 className='text-5xl md:text-7xl xl:text-8xl 3xl:text-9xl my-4 md:my-12'>{currentTrack.title}</h2>
+                                <h2 className='w-full text-4xl md:text-6xl xl:text-7xl 3xl:text-8xl my-4 md:my-12'>{currentTrack.title}</h2>
                                 <p className='text-lg md:text-xl xl:text-2xl 3xl:text-4xl'>{currentTrack.description}</p>
+                                {currentTrack.title !== 'COMING SOON' && (
+                                    <div className="mt-8 md:mt-12">
+                                        {currentTrack.pdf ? (
+                                            <a href={currentTrack.pdf} target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 border-2 border-dashed border-orange-500 text-orange-500 bg-transparent hover:bg-orange-500/20 font-bold text-lg md:text-xl rounded transition-all duration-300 hover:-translate-y-1 shadow-[0_0_10px_rgba(249,115,22,0.15)] hover:shadow-[0_0_45px_rgba(249,115,22,0.45),inset_0_0_15px_rgba(249,115,22,0.4)]">
+                                                Download Track PDF
+                                            </a>
+                                        ) : (
+                                            <button disabled className="inline-block px-6 py-3 border border-gray-600 text-gray-500 font-bold text-lg md:text-xl rounded cursor-not-allowed">
+                                                PDF Coming Soon
+                                            </button>
+                                        )}
+                                    </div>
+                                )}
                             </div>
                         ) : (
                             <p>Select a track to see more information.</p>

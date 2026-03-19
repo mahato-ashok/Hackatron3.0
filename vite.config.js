@@ -32,7 +32,19 @@ export default defineConfig({
     // Warn on chunks > 500KB
     chunkSizeWarningLimit: 500,
     rollupOptions: {
-      // Use default Vite chunking to prevent circular dependency execution order issues
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom'],
+          'router': ['react-router-dom'],
+          'mui': [
+            '@mui/material',
+            '@mui/icons-material',
+            '@emotion/react',
+            '@emotion/styled',
+          ],
+          'utils': ['react-scroll', 'lucide-react'],
+        },
+      },
     },
     // Minify with esbuild (faster, good output)
     minify: 'esbuild',

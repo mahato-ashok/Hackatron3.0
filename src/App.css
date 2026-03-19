@@ -15,8 +15,8 @@ body {
   inset: 0;
   width: 100%;
   height: 100%;
-  /* PNG fallback for browsers that don't support WebP */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/bg.png');
+  /* WebP background to avoid 404s since the PNG was deleted */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/bg.webp');
   background-size: cover;
   background-position: center;
   z-index: -100;
