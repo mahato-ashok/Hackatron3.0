@@ -31,21 +31,7 @@ export default defineConfig({
     target: 'es2020',
     // Warn on chunks > 500KB
     chunkSizeWarningLimit: 500,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'router': ['react-router-dom'],
-          'mui': [
-            '@mui/material',
-            '@mui/icons-material',
-            '@emotion/react',
-            '@emotion/styled',
-          ],
-          'utils': ['react-scroll', 'lucide-react'],
-        },
-      },
-    },
+
     // Minify with esbuild (faster, good output)
     minify: 'esbuild',
   },
