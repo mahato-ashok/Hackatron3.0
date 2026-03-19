@@ -128,7 +128,7 @@ const Tracks = () => {
                             {trackData.filter(t => t.id !== undefined).map((track) => (
                                 <div key={track.id} className="card min-w-24 sm:min-w-36 3xl:min-w-40 grid place-items-center relative" onClick={() => handleCardClick(track.id)}>
                                     <img loading="lazy" src={track.card} alt="" className='opacity-70 3xl:min-w-40' />
-                                    <h4 className='absolute text-lg md:text-2xl left-0 top-0 right-0 bottom-0 m-auto w h-fit text-center px-4 leading-tight flex items-center justify-center'>{track.title}</h4>
+                                    <h4 className='absolute text-sm sm:text-base md:text-lg lg:text-xl left-0 top-0 right-0 bottom-0 m-auto w-full h-fit text-center px-2 sm:px-4 break-words leading-tight flex items-center justify-center'>{track.title}</h4>
                                 </div>
                             ))}
                         </div>

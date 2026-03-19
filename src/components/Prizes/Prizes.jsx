@@ -49,35 +49,35 @@ const Prizes = () => {
                         {/* Main Rectangle */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full mb-6 ">
 
-    {/* FIRST BLOCK */}
-    <div className="flex flex-col items-center border-[6px] max-lg:border-4 border-dashed border-[#0384fc] p-6 text-center md:h-[500px] transition-all duration-300 hover:shadow-[0_0_45px_rgba(3,132,252,0.45)] hover:-translate-y-1">
+                            {/* FIRST BLOCK */}
+                            <div className="flex flex-col flex-1 justify-center items-center border-[6px] max-lg:border-4 border-dashed border-[#0384fc] p-6 text-center transition-all duration-300 hover:shadow-[0_0_45px_rgba(3,132,252,0.45)] hover:-translate-y-1">
 
-        <img 
-            src={win5} 
-            alt="Prize"
-            className="w-32 md:w-100 lg:w-48 md:h-90 mb-4 object-contain"
-        />
-        <h2 className="text-2xl md:text-6xl font-semibold">CASH PRIZES</h2>
-        <h2 className="text-3xl md:text-5xl text-blue-500 mt-2 font-semibold">₹50000</h2>
+                                <img
+                                    src={win5}
+                                    alt="Prize"
+                                    className="w-32 md:w-100 lg:w-48 md:h-90 mb-4 object-contain"
+                                />
+                                <h2 className="text-2xl md:text-6xl font-semibold">CASH PRIZES</h2>
+                                <h2 className="text-3xl md:text-5xl text-blue-500 mt-2 font-semibold">₹50000</h2>
 
-    </div>
+                            </div>
 
 
-    {/* SECOND BLOCK */}
-    <div className="flex flex-col items-center border-[6px] max-lg:border-4 border-dashed border-purple p-6 text-center transition-all duration-300 hover:shadow-[0_0_45px_rgba(168,85,247,0.45)] hover:-translate-y-1">
+                            {/* SECOND BLOCK */}
+                            <div className="flex flex-col flex-1 justify-center items-center border-[6px] max-lg:border-4 border-dashed border-purple p-6 text-center transition-all duration-300 hover:shadow-[0_0_45px_rgba(168,85,247,0.45)] hover:-translate-y-1">
 
-        <img 
-            src={win6} 
-            alt="Prize"
-            className="w-full md:w-100 lg:w-100 md:h-90 mb-6 object-contain"
-        />
+                                <img
+                                    src={win6}
+                                    alt="Prize"
+                                    className="w-full md:w-100 lg:w-100 md:h-90 mb-6 object-contain"
+                                />
 
-        <h2 className="text-2xl md:text-6xl font-semibold">TOTAL PRIZE POOL</h2>
-        <h2 className="text-3xl md:text-5xl text-purple mt-2 font-semibold">₹1.5 LAKH</h2>
+                                <h2 className="text-2xl md:text-6xl font-semibold">TOTAL PRIZE POOL</h2>
+                                <h2 className="text-3xl md:text-5xl text-purple mt-2 font-semibold">₹1.5 LAKH</h2>
 
-    </div>
+                            </div>
 
-</div>
+                        </div>
                         {/* Two Thin Rectangles Below */}
                         <div className="flex flex-col w-full gap-2">
                             <div className="flex-1 mb-4 flex flex-col transition-all duration-300">

@@ -62,6 +62,15 @@ body {
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 96px;
+    font-size: 18px;
+    /* Base upscale for small-rendering VT323 font */
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 20px;
+        /* Standardize desktop readability */
+    }
 }
 
 @media (max-width: 540px) {
