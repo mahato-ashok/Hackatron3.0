@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Form, Link } from 'react-router-dom';
 import stars from '../../assets/images/footer/stars.svg';
 /*import beeceptorLogo from '../../assets/images/sponsors/beeceptor.svg';
 import wolframLogo from '../../assets/images/sponsors/wolfram.png';
@@ -27,6 +27,10 @@ import devfolioLogo2026 from '../../assets/images/Sponsors2026/Devfolio-logo.web
 import codeCrafterLogo2026 from '../../assets/images/Sponsors2026/CodeCrafters-logo.webp';
 import sybgenLogo2026 from '../../assets/images/Sponsors2026/SYBGEN-logo.webp';
 import interviewCakeLogo2026 from '../../assets/images/Sponsors2026/interview-cake-logo.webp';
+import credilaLogo2026 from '../../assets/images/Sponsors2026/credila.webp';
+import insightsLogo2026 from '../../assets/images/Sponsors2026/iNsights.png';
+import n8nLogo2026 from '../../assets/images/Sponsors2026/n8n_Logo.svg';
+import mastraLogo2026 from '../../assets/images/Sponsors2026/mastra_Logo.png';
 
 
 import ProgressiveImage from "../ProgressiveImage";
@@ -34,6 +38,9 @@ import devfolioLogo2026Mini from '../../assets/images/Sponsors2026/SponsorsMini/
 import codeCrafterLogo2026Mini from '../../assets/images/Sponsors2026/SponsorsMini/CodeCrafters-logo.webp';
 import sybgenLogo2026Mini from '../../assets/images/Sponsors2026/SponsorsMini/SYBGEN-logo.webp';
 import interviewCakeLogo2026Mini from '../../assets/images/Sponsors2026/SponsorsMini/interview-cake-logo.webp';
+import credilaLogo2026Mini from '../../assets/images/Sponsors2026/SponsorsMini/credilaMini.webp';
+import insightsLogo2026Mini from '../../assets/images/Sponsors2026/SponsorsMini/iNsightsMini.png';
+import mastraLogo2026Mini from '../../assets/images/Sponsors2026/SponsorsMini/mastra_LogoMini.png';
 
 const Sponsors = () => {
     const [bgSize, setBgSize] = useState("110%");
@@ -132,6 +139,36 @@ const Sponsors = () => {
                     </div>
                 </div>
 
+                <div className='pt-3 3xl:pt-10 pb-12 border-dashed border-[#10b981] border-b-[0.1rem] sm:border-b-[0.5rem] md:pt-4 w-[80vw] xl:w-[65vw] 2xl:w-full mx-auto flex flex-col items-center justify-center gap-5 lg:gap-8'>
+                    <h3 className='font-vt323 font-medium text-[#10b981] text-[9vw] leading-[5vw] sm:leading-[3.5rem] sm:text-[7vw] lg:text-[6vw] lg:leading-[3rem] xl:text-[5vw] xl:leading-[5rem] 3xl:text-[4vw]'>TRACK SPONSOR</h3>
+                    <div className='flex flex-wrap justify-center items-center gap-8 px-12'>
+                        <div className='relative group'>
+                            <Link to='https://www.credila.com/' target="_blank" rel="noopener noreferrer" className="relative flex flex-col items-center justify-center w-[60vw] h-[100px] sm:w-[15vw] sm:h-[120px] 3xl:w-[15rem] transition-all duration-300 hover:scale-105">
+                                <div className="flex items-center justify-center w-full h-full p-4 bg-white rounded-2xl shadow-[0_0_25px_rgba(16,185,129,0.3)] hover:shadow-[0_0_25px_rgba(16,185,129,0.7)] transition-all duration-300 overflow-hidden">
+                                    <ProgressiveImage
+                                        src={credilaLogo2026} alt="CREDILA LOGO" width={1000} height={1000} className='max-w-full max-h-full w-auto h-auto object-contain'
+                                        placeholder={credilaLogo2026Mini} />
+                                </div>
+                                <div className="absolute top-full left-0 right-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 pt-3 z-10">
+                                    <p className="font-vt323 text-[#ec53b0] text-lg md:text-xl tracking-widest text-center px-1 whitespace-nowrap bg-black/40 rounded">HDFC CREDILA</p>
+                                </div>
+                            </Link>
+                        </div>
+                         <div className='relative group'>
+                            <Link to='https://devfolio.co/' target="_blank" rel="noopener noreferrer" className="relative flex flex-col items-center justify-center w-[60vw] h-[100px] sm:w-[15vw] sm:h-[120px] 3xl:w-[15rem] transition-all duration-300 hover:scale-105">
+                                <div className="flex items-center justify-center w-full h-full p-4 bg-white rounded-2xl shadow-[0_0_25px_rgba(16,185,129,0.3)] hover:shadow-[0_0_25px_rgba(16,185,129,0.7)] transition-all duration-300 overflow-hidden">
+                                    <ProgressiveImage
+                                        src={insightsLogo2026} alt="INSIGHTS LOGO" width={1000} height={1000} className='max-w-full max-h-full w-auto h-auto object-contain'
+                                        placeholder={insightsLogo2026Mini} />
+                                </div>
+                                <div className="absolute top-full left-0 right-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 pt-3 z-10">
+                                    <p className="font-vt323 text-[#ec53b0] text-lg md:text-xl tracking-widest text-center px-1 whitespace-nowrap bg-black/40 rounded">INSIGHTS</p>
+                                </div>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+
                 {/* SILVER */}
                 <div className='pt-3 3xl:pt-10 pb-12 border-dashed border-[#9e9e9e] border-b-[0.1rem] sm:border-b-[0.5rem] md:pt-4 w-[80vw] xl:w-[65vw] 2xl:w-full mx-auto flex flex-col items-center justify-center gap-5 lg:gap-8'>
                     <h3 className='font-vt323 font-medium text-[#9e9e9e] text-[9vw] leading-[5vw] sm:leading-[3.5rem] sm:text-[7vw] lg:text-[6vw] lg:leading-[3rem] xl:text-[5vw] xl:leading-[5rem] 3xl:text-[4vw]'>SILVER</h3>
@@ -144,6 +181,17 @@ const Sponsors = () => {
                                 </div>
                                 <div className="absolute top-full left-0 right-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 pt-3 z-10">
                                     <p className="font-vt323 text-[#ec53b0] text-lg md:text-xl tracking-widest text-center px-1 whitespace-nowrap bg-black/40 rounded">CODECRAFTERS</p>
+                                </div>
+                            </Link>
+                        </div>
+                        <div className='relative group'>
+                            <Link to='https://mastra.ai/' target="_blank" rel="noopener noreferrer" className="relative flex flex-col items-center justify-center w-[60vw] h-[100px] sm:w-[15vw] sm:h-[120px] 3xl:w-[15rem] transition-all duration-300 hover:scale-105">
+                                <div className="flex items-center justify-center w-full h-full p-4 bg-white rounded-2xl shadow-[0_0_25px_rgba(158,158,158,0.3)] hover:shadow-[0_0_25px_rgba(158,158,158,0.7)] transition-all duration-300 overflow-hidden">
+                                    <ProgressiveImage src={mastraLogo2026} alt="MASTRA LOGO" width={1000} height={1000} className='max-w-full max-h-full w-auto h-auto object-contain'
+                                        placeholder={mastraLogo2026Mini} />
+                                </div>
+                                <div className="absolute top-full left-0 right-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 pt-3 z-10">
+                                    <p className="font-vt323 text-[#ec53b0] text-lg md:text-xl tracking-widest text-center px-1 whitespace-nowrap bg-black/40 rounded">MASTRA</p>
                                 </div>
                             </Link>
                         </div>
@@ -172,6 +220,17 @@ const Sponsors = () => {
                                 </div>
                                 <div className="absolute top-full left-0 right-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 pt-3 z-10">
                                     <p className="font-vt323 text-[#ec53b0] text-lg md:text-xl tracking-widest text-center px-1 whitespace-nowrap bg-black/40 rounded">INTERVIEW CAKE</p>
+                                </div>
+                            </Link>
+                        </div>
+                        <div className='relative group'>
+                            <Link to='https://n8n.io/' target="_blank" rel="noopener noreferrer" className="relative flex flex-col items-center justify-center w-[60vw] h-[100px] sm:w-[15vw] sm:h-[120px] 3xl:w-[15rem] transition-all duration-300 hover:scale-105">
+                                <div className="flex items-center justify-center w-full h-full p-4 bg-white rounded-2xl shadow-[0_0_25px_rgba(157,68,192,0.3)] hover:shadow-[0_0_25px_rgba(157,68,192,0.7)] transition-all duration-300 overflow-hidden">
+                                    <ProgressiveImage src={n8nLogo2026} alt="N8N LOGO" width={1000} height={1000} className='max-w-full max-h-full w-auto h-auto object-contain'
+                                        placeholder={n8nLogo2026} />
+                                </div>
+                                <div className="absolute top-full left-0 right-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 pt-3 z-10">
+                                    <p className="font-vt323 text-[#ec53b0] text-lg md:text-xl tracking-widest text-center px-1 whitespace-nowrap bg-black/40 rounded">N8N</p>
                                 </div>
                             </Link>
                         </div>
