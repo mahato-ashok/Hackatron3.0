@@ -117,8 +117,8 @@ export default function Navbar() {
 
                     {/* Updated Link Styles */}
                     {[
-                        { name: 'SCHEDULE', href: '#schedule', func: scrollToSchedule },
                         { name: 'ABOUT', href: '#aboutus', func: scrollToAbout },
+                        { name: 'SCHEDULE', href: '#schedule', func: scrollToSchedule },
                         { name: 'VENUE', href: '#venue', func: scrollToVenue },
                         { name: 'PRIZES', href: '#prizes', func: scrollToPrizes },
                         { name: 'TRACKS', href: '#tracks', func: scrollToTracks },

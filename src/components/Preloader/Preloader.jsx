@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Preloader.css';
-import man from '/images/HomeMascot.gif';
+import man from '/images/HomeMascot.webm';
 import bg from '/images/bg.webp';
 
 // Each line mirrors an actual section command from the website
@@ -95,7 +95,15 @@ const Preloader = ({ onComplete }) => {
                     className={`w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32 ${manVisible ? '' : 'opacity-0'} ${manVisible && !manIdle ? 'man-enter' : ''} ${manIdle ? 'man-idle' : ''}`}
                     style={{ filter: 'drop-shadow(0 0 20px rgba(157,68,192,0.7)) drop-shadow(0 0 50px rgba(95,166,255,0.25))' }}
                 >
-                    <img loading="lazy" src={man} alt="Hackatron Mascot" className="w-full h-full object-contain" />
+                    <video
+  src={man}
+  className="w-full h-full object-contain"
+  autoPlay
+  loop
+  muted
+  playsInline
+  preload="auto"
+/>
                 </div>
 
                 {/* ── Terminal Window ── */}
