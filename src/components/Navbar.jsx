@@ -86,7 +86,34 @@ export default function Navbar() {
                     />
                 </a>
 
-                <ul className="justify-center flex 3xl:text-6xl 3xl:space-x-[7rem] 2xl:space-x-[4rem] lg:space-x-[2rem] sm:space-x-[1.2rem] sm:text-[22px] min-[540px]:space-x-[1.6rem] min-[540px]:text-[22px] md:text-[22px] md:space-x-5 lg:text-[1.6rem] xl:text-[2rem] text-white items-center max-[768px]:hidden ">
+                <ul className="
+                            flex 
+                            justify-center 
+                            items-center 
+                            text-white 
+                            
+                            gap-2 
+                            sm:gap-3 
+                            md:gap-4 
+                            lg:gap-5 
+                            
+                            text-base 
+                            md:text-lg 
+                            lg:text-lg 
+                            xl:text-xl 
+                            
+                            min-[1400px]:text-2xl 
+                            
+                            whitespace-nowrap 
+                            overflow-x-auto 
+                            scrollbar-hide
+                            
+                            w-full 
+                            px-2 
+                            box-border 
+                            
+                            max-[768px]:hidden
+                            ">
 
                     {/* Updated Link Styles */}
                     {[
