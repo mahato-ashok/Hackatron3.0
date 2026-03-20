@@ -155,7 +155,7 @@ const Sponsors = () => {
                             </Link>
                         </div>
                          <div className='relative group'>
-                            <Link to='https://devfolio.co/' target="_blank" rel="noopener noreferrer" className="relative flex flex-col items-center justify-center w-[60vw] h-[100px] sm:w-[15vw] sm:h-[120px] 3xl:w-[15rem] transition-all duration-300 hover:scale-105">
+                            <Link to='https://thorecoin.com/' target="_blank" rel="noopener noreferrer" className="relative flex flex-col items-center justify-center w-[60vw] h-[100px] sm:w-[15vw] sm:h-[120px] 3xl:w-[15rem] transition-all duration-300 hover:scale-105">
                                 <div className="flex items-center justify-center w-full h-full p-4 bg-white rounded-2xl shadow-[0_0_25px_rgba(16,185,129,0.3)] hover:shadow-[0_0_25px_rgba(16,185,129,0.7)] transition-all duration-300 overflow-hidden">
                                     <ProgressiveImage
                                         src={insightsLogo2026} alt="INSIGHTS LOGO" width={1000} height={1000} className='max-w-full max-h-full w-auto h-auto object-contain'
