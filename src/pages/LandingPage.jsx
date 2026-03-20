@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import head from "/images/head.webp";
-import HomeMascot1 from "/images/HomeMascot.gif";
+import HomeMascot1 from "/images/HomeMascot.webm";
 import HomeMascotStatic from "/images/HomeMascot_static.webp";
 import DevfolioLogo from "../assets/images/LandingPage/DevfolioLogo.svg";
 import TimerSection from "./TimerSection";
@@ -81,16 +81,35 @@ function LandingPage() {
 
           {/* Mascot — centered prominently */}
           <div className="home-mascot cursor-pointer hover:scale-105 transition-transform duration-500 mt-2 md:mt-0">
-            <img
-              src={/bot|googlebot|crawler|spider|robot|crawling|lighthouse|chrome-lighthouse/i.test(navigator.userAgent) ? HomeMascotStatic : HomeMascot1}
-              alt="Hackatron Mascot"
-              className="home-mascot-img"
-              width="713"
-              height="1054"
-              fetchpriority="high"
-            />
-          </div>
+  {/bot|googlebot|crawler|spider|robot|crawling|lighthouse|chrome-lighthouse/i.test(navigator.userAgent) ? (
+    
+    <img
+      src={HomeMascotStatic}
+      alt="Hackatron Mascot"
+      className="home-mascot-img"
+      width="713"
+      height="1054"
+      fetchpriority="high"
+    />
 
+  ) : (
+
+    <video
+      className="home-mascot-img"
+      width="713"
+      height="1054"
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="metadata"
+      poster={HomeMascotStatic}   
+    >
+      <source src={HomeMascot1} type="video/webm" />
+    </video>
+
+  )}
+</div>
           {/* Apply with Devfolio button — centered below mascot */}
           <button
             className="devfolio-btn -mt-8 md:-mt-12 z-10 relative"
