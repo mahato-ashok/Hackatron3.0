@@ -14,6 +14,7 @@ import education_card from '../../assets/images/tracks/education_card.webp';
 import education from '../../assets/images/tracks/education.webp';
 import web3_card from '../../assets/images/tracks/web3_card.webp';
 import web3 from '../../assets/images/tracks/web3.webp';
+import gaming_card from '../../assets/images/tracks/gaming_card.webp';
 
 
 
@@ -31,7 +32,9 @@ const Tracks = () => {
         */
         { id: 5, title: 'WEB3', description: 'Design and develop a secure and scalable platform that enables P2P, B2B, and merchant payment acceptance using stablecoins. The solution should support features such as QR code–based payments, wallet integration, real-time transaction monitoring, and automated settlement confirmation to ensure fast, transparent, and reliable transactions. In the Indian market, small and medium enterprises often face high transaction fees and delays in cross-border payments; a stablecoin-powered system can help reduce costs, enable faster settlements, and simplify global remittances, making digital payments more efficient and accessible for businesses and individuals.', image: web3, card: web3_card },
         { id: 6, title: 'iNSIGHTS AI Productivity Track', description: 'This track challenges participants to build an integrated AI-powered system that transforms fragmented workflows into a seamless execution pipeline. Using the iNSIGHTS ecosystem, teams will move from idea generation to deep research, project creation, content generation, and learning within a unified platform. The goal is to enable faster, smarter execution by combining multiple AI capabilities into a single efficient workflow that enhances productivity for students, developers, and creators.', image: education, card: education_card, pdf: '/tracks/iNSIGHTS_Hackatron3.0_Track.pdf' },
-        { id: 7, title: 'COMING SOON', description: 'More problem statements will be revealed soon! Stay tuned for exciting challenges across other domains.', image: web3, card: web3_card }, // Reusing web3 assets as a placeholder since others weren't explicitly provided for "coming soon"
+        { id: 7, title: 'MULTIPLAYER GAMING', description: "Design and develop a real-time multiplayer gaming platform that allows players to interact, compete, or collaborate with others online. The system should support features such as real-time synchronization of player actions, matchmaking or room-based gameplay, leaderboards, and in-game communication to ensure smooth and engaging gameplay experiences. The platform should be scalable and capable of handling multiple concurrent players while maintaining low latency and fair gameplay. In today's gaming ecosystem, multiplayer experiences are becoming increasingly popular as they promote social interaction and competitive engagement. A robust multiplayer gaming system can enable developers to create interactive experiences ranging from strategy games and puzzles to competitive battle arenas, making online gaming more immersive, accessible, and community-driven."
+            , image: web3 , card: gaming_card, },
+        { id: 8, title: 'COMING SOON', description: 'More problem statements will be revealed soon! Stay tuned for exciting challenges across other domains.', image: web3, card: web3_card }, // Reusing web3 assets as a placeholder since others weren't explicitly provided for "coming soon"
         /*
         { id: 6, title: 'OPEN INNOVATION', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. ', image: open_innovation, card: open_innovation_card },
         // Add more tracks here...
