@@ -5,41 +5,54 @@ const ProgressiveImage = ({ src, placeholder, alt, style, ...props }) => {
   const imgRef = useRef(null);
 
   useEffect(() => {
-    // If the image is cached by the browser, it might complete before the onLoad event listener is attached.
-    if (imgRef.current && imgRef.current.complete) {
+    // Reset loaded state when src changes
+    setLoaded(false);
+
+    const img = new Image();
+    img.src = src;
+
+    // Fast path: image is fully cached and decoded
+    if (img.complete && img.naturalHeight > 0) {
       setLoaded(true);
+      return;
     }
+
+    // Standard path: fetch image once the placeholder starts coming into view
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          img.onload = () => setLoaded(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "300px" } // Load well before the image is fully in the viewport
+    );
+
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+      img.onload = null;
+    };
   }, [src]);
 
   return (
-    <>
-      {!loaded && (
-        <img
-          src={placeholder}
-          alt={alt}
-          {...props}
-          style={{
-            ...style,
-            filter: "blur(12px)",
-            transform: "scale(1.05)"
-          }}
-        />
-      )}
-
-      <img
-        ref={imgRef}
-        src={src}
-        alt={alt}
-        loading="lazy"
-        decoding="async"
-        {...props}
-        onLoad={() => setLoaded(true)}
-        style={{
-          ...style,
-          display: loaded ? "block" : "none"
-        }}
-      />
-    </>
+    <img
+      ref={imgRef}
+      src={loaded ? src : placeholder}
+      alt={alt}
+      loading="lazy"
+      decoding="async"
+      {...props}
+      style={{
+        ...style,
+        filter: loaded ? "none" : "blur(12px)",
+        transform: loaded ? "none" : "scale(1.05)",
+        transition: "filter 0.5s ease-out, transform 0.5s ease-out"
+      }}
+    />
   );
 };
 

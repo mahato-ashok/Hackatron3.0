@@ -123,13 +123,13 @@ const Tracks = () => {
                             <p>Select a track to see more information.</p>
                         )}
                     </div>
-                    <div className="carousel flex items-center gap-5 h-fit self-end">
-                        <img loading="lazy" src={left_key} alt="" className='opacity-50 hover:opacity-100' onClick={() => {
+                    <div className="carousel flex items-center gap-2 sm:gap-5 h-fit self-end w-full">
+                        <img loading="lazy" src={left_key} alt="prev" className='flex-shrink-0 opacity-50 hover:opacity-100 active:opacity-100 cursor-pointer w-8 sm:w-auto' onClick={() => {
                             moveLeft();
                             let idx = trackData.findIndex(t => t.id === selectedTrack);
                             if (idx > 0) handleCardClick(trackData[idx - 1].id);
                         }} />
-                        <div className='tracks-wrapper flex items-center gap-5 lg:max-w-[480px] 3xl:max-w-[1000px] overflow-x-auto scroll-smooth no-scrollbar py-4 px-2' id='slider'>
+                        <div className='tracks-wrapper flex items-center gap-3 sm:gap-5 flex-1 overflow-x-auto scroll-smooth no-scrollbar py-4 px-1 sm:px-2' id='slider'>
                             {trackData.filter(t => t.id !== undefined).map((track) => (
                                 <div key={track.id} className={`card min-w-24 sm:min-w-36 3xl:min-w-40 grid place-items-center relative cursor-pointer transition-all duration-300 ${selectedTrack === track.id ? 'scale-110 z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]' : 'scale-90 opacity-60 hover:scale-100 hover:opacity-90'}`} onClick={() => handleCardClick(track.id)}>
                                     <img loading="lazy" src={track.card} alt="" className={`transition-opacity duration-300 3xl:min-w-40 ${selectedTrack === track.id ? 'opacity-100' : 'opacity-80'}`} />
@@ -137,7 +137,7 @@ const Tracks = () => {
                                 </div>
                             ))}
                         </div>
-                        <img loading="lazy" src={right_key} alt="" className='opacity-50 hover:opacity-100' onClick={() => {
+                        <img loading="lazy" src={right_key} alt="next" className='flex-shrink-0 opacity-50 hover:opacity-100 active:opacity-100 cursor-pointer w-8 sm:w-auto' onClick={() => {
                             moveRight();
                             let idx = trackData.findIndex(t => t.id === selectedTrack);
                             handleCardClick(trackData[(idx + 1) % trackData.length].id);
