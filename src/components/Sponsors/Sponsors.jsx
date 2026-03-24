@@ -27,7 +27,7 @@ import devfolioLogo2026 from '../../assets/images/Sponsors2026/Devfolio-logo.web
 import codeCrafterLogo2026 from '../../assets/images/Sponsors2026/CodeCrafters-logo.webp';
 import sybgenLogo2026 from '../../assets/images/Sponsors2026/SYBGEN-logo.webp';
 import interviewCakeLogo2026 from '../../assets/images/Sponsors2026/interview-cake-logo.webp';
-import credilaLogo2026 from '../../assets/images/Sponsors2026/credila.webp';
+import credilaLogo2026 from '../../assets/images/Sponsors2026/Credila-Logo.png';
 import insightsLogo2026 from '../../assets/images/Sponsors2026/iNsights.png';
 import n8nLogo2026 from '../../assets/images/Sponsors2026/n8n_Logo.svg';
 import mastraLogo2026 from '../../assets/images/Sponsors2026/mastra_Logo.png';
@@ -154,7 +154,7 @@ const Sponsors = () => {
                                 </div>
                             </Link>
                         </div>
-                         <div className='relative group'>
+                        <div className='relative group'>
                             <Link to='https://thorecoin.com/' target="_blank" rel="noopener noreferrer" className="relative flex flex-col items-center justify-center w-[60vw] h-[100px] sm:w-[15vw] sm:h-[120px] 3xl:w-[15rem] transition-all duration-300 hover:scale-105">
                                 <div className="flex items-center justify-center w-full h-full p-4 bg-white rounded-2xl shadow-[0_0_25px_rgba(16,185,129,0.3)] hover:shadow-[0_0_25px_rgba(16,185,129,0.7)] transition-all duration-300 overflow-hidden">
                                     <ProgressiveImage

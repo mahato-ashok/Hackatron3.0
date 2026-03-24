@@ -45,35 +45,35 @@ const Prizes = () => {
                     $ sudo decrypt <span className="text-white">PRIZES</span>.enc
                 </h2>
                 <div className="flex justify-center items-center h-full">
-                    <div className="px-4 sm:p-10 text-left w-full">
+                    <div className="px-4 sm:p-5 md:p-10 text-left w-full">
                         {/* Main Rectangle */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full mb-6 ">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 w-full mb-6">
 
                             {/* FIRST BLOCK */}
-                            <div className="flex flex-col flex-1 justify-center items-center border-[6px] max-lg:border-4 border-dashed border-[#0384fc] p-6 text-center transition-all duration-300 hover:shadow-[0_0_45px_rgba(3,132,252,0.45)] hover:-translate-y-1">
+                            <div className="flex flex-col flex-1 justify-center items-center border-[4px] border-dashed border-[#0384fc] p-4 md:p-8 text-center transition-all duration-300 hover:shadow-[0_0_45px_rgba(3,132,252,0.45)] hover:-translate-y-1">
 
                                 <img
                                     src={win5}
                                     alt="Prize"
-                                    className="w-32 md:w-100 lg:w-48 md:h-90 mb-4 object-contain"
+                                    className="h-32 md:h-48 lg:h-56 mb-4 object-contain"
                                 />
-                                <h2 className="text-2xl md:text-6xl font-semibold">CASH PRIZES</h2>
-                                <h2 className="text-3xl md:text-5xl text-blue-500 mt-2 font-semibold">₹50000</h2>
+                                <h2 className="text-2xl md:text-4xl xl:text-5xl font-semibold">CASH PRIZES</h2>
+                                <h2 className="text-3xl md:text-4xl xl:text-5xl text-blue-500 mt-2 font-semibold">₹50,000</h2>
 
                             </div>
 
 
                             {/* SECOND BLOCK */}
-                            <div className="flex flex-col flex-1 justify-center items-center border-[6px] max-lg:border-4 border-dashed border-purple p-6 text-center transition-all duration-300 hover:shadow-[0_0_45px_rgba(168,85,247,0.45)] hover:-translate-y-1">
+                            <div className="flex flex-col flex-1 justify-center items-center border-[4px] border-dashed border-purple p-4 md:p-8 text-center transition-all duration-300 hover:shadow-[0_0_45px_rgba(168,85,247,0.45)] hover:-translate-y-1">
 
                                 <img
                                     src={win6}
                                     alt="Prize"
-                                    className="w-full md:w-100 lg:w-100 md:h-90 mb-6 object-contain"
+                                    className="h-32 md:h-48 lg:h-56 mb-4 md:mb-6 object-contain"
                                 />
 
-                                <h2 className="text-2xl md:text-6xl font-semibold">TOTAL PRIZE POOL</h2>
-                                <h2 className="text-3xl md:text-5xl text-purple mt-2 font-semibold">₹1.5 LAKH</h2>
+                                <h2 className="text-2xl md:text-4xl xl:text-5xl font-semibold">TOTAL PRIZE POOL</h2>
+                                <h2 className="text-3xl md:text-4xl xl:text-5xl text-purple mt-2 font-semibold">₹3,00,000</h2>
 
                             </div>
 

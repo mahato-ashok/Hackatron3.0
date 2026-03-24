@@ -35,15 +35,15 @@ const Venue = () => {
           $ find <span className="text-white">DESTINATION</span>.txt
         </h2>
 
-        <div className="grid xl:grid-cols-2 gap-12 px-4 sm:p-10">
+        <div className="grid xl:grid-cols-2 gap-6 md:gap-12 px-4 sm:p-10">
 
-          <div className="space-y-8">
+          <div className="space-y-4 md:space-y-5">
 
-            <div className="group flex gap-6 items-start border-[6px] max-lg:border-4 border-dashed border-[#7f7cff] bg-[#050826]/30 backdrop-blur-[1px] p-6 md:p-8 transition-all duration-300 hover:shadow-[0_0_45px_rgba(127,124,255,0.45)] hover:-translate-y-1">
-              <ProgressiveImage  src="/images/Destination/Venue.webp"
+            <div className="group flex gap-4 md:gap-6 items-start border-[4px] border-dashed border-[#7f7cff] bg-[#050826]/30 backdrop-blur-[1px] p-4 md:p-6 transition-all duration-300 hover:shadow-[0_0_45px_rgba(127,124,255,0.45)] hover:-translate-y-1">
+              <ProgressiveImage src="/images/Destination/Venue.webp"
                 alt="venue"
                 className="w-16 h-16 md:w-20 md:h-20 pixelated object-contain"
-                placeholder = "/images/Destination/DestinationMini/Venue.webp"/>
+                placeholder="/images/Destination/DestinationMini/Venue.webp" />
               <div>
                 <h3 className="text-pink-400 text-2xl md:text-3xl xl:text-4xl tracking-wide mb-2">
                   Venue
@@ -56,12 +56,12 @@ const Venue = () => {
               </div>
             </div>
 
-            <div className="group flex gap-6 items-start border-[6px] max-lg:border-4 border-dashed border-[#0384fc] bg-[#050826]/30 backdrop-blur-[1px] p-6 md:p-8 transition-all duration-300 hover:shadow-[0_0_45px_rgba(3,132,252,0.45)] hover:-translate-y-1">
+            <div className="group flex gap-4 md:gap-6 items-start border-[4px] border-dashed border-[#0384fc] bg-[#050826]/30 backdrop-blur-[1px] p-4 md:p-6 transition-all duration-300 hover:shadow-[0_0_45px_rgba(3,132,252,0.45)] hover:-translate-y-1">
               <ProgressiveImage
-              src="/images/Destination/Date.webp"
+                src="/images/Destination/Date.webp"
                 alt="date & Time"
                 className="w-16 h-16 md:w-20 md:h-20 pixelated object-contain"
-                placeholder = "/images/Destination/DestinationMini/Date.webp"/>
+                placeholder="/images/Destination/DestinationMini/Date.webp" />
               <div>
                 <h3 className="text-pink-400 text-2xl md:text-3xl xl:text-4xl tracking-wide mb-2">
                   Date & Time
@@ -74,21 +74,21 @@ const Venue = () => {
               </div>
             </div>
 
-            <div className="group flex gap-6 items-start border-[6px] max-lg:border-4 border-dashed border-purple bg-[#050826]/30 backdrop-blur-[1px] p-6 md:p-8 transition-all duration-300 hover:shadow-[0_0_45px_rgba(168,85,247,0.45)] hover:-translate-y-1">
+            <div className="group flex gap-4 md:gap-6 items-start border-[4px] border-dashed border-purple bg-[#050826]/30 backdrop-blur-[1px] p-4 md:p-6 transition-all duration-300 hover:shadow-[0_0_45px_rgba(168,85,247,0.45)] hover:-translate-y-1">
               <ProgressiveImage
-              src="/images/Destination/Join.webp"
+                src="/images/Destination/Join.webp"
                 alt="Why Join"
                 className="w-16 h-16 md:w-20 md:h-20 pixelated object-contain"
-                placeholder = "/images/Destination/DestinationMini/Join.webp"/>
+                placeholder="/images/Destination/DestinationMini/Join.webp" />
               <div>
                 <h3 className="text-pink-400 text-2xl md:text-3xl xl:text-4xl tracking-wide mb-2">
                   Why Join?
                 </h3>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-gray-200 text-lg md:text-xl xl:text-2xl">
-                  <li>•Epic rewards</li>
-                  <li>• Free meals & stay</li>
-                  <li>•Create & collaborate</li>
-                  <li>• Build & connect</li>
+                <ul className="flex flex-col gap-2 text-gray-200 text-base md:text-lg xl:text-xl">
+                  <li className="flex gap-2"><span className="text-pink-400">•</span> <span>Epic rewards</span></li>
+                  <li className="flex gap-2"><span className="text-pink-400">•</span> <span>Free meals & stay</span></li>
+                  <li className="flex gap-2"><span className="text-pink-400">•</span> <span>Create & collaborate</span></li>
+                  <li className="flex gap-2"><span className="text-pink-400">•</span> <span>Build & connect</span></li>
                 </ul>
               </div>
             </div>
