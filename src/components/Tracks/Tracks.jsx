@@ -99,8 +99,8 @@ const Tracks = () => {
             {currentTrack?.image && <img loading="lazy" src={currentTrack.image} alt="" className='z-1 absolute pointer-events-none left-0 right-0 mx-auto max-w-full xl:-translate-y-48 opacity-50' />}
             <div className='text-white max-w-[1280px] 3xl:max-w-[2000px] md:mx-8 lg:mx-12 xl:mx-auto z-2'>
                 <h2 className='py-6 md:text-left text-2xl md:text-4xl xl:text-5xl 3xl:text-7xl text-[#9E9E9E]'>$ ls -a <span className='text-white'>TRACKS</span></h2>
-                <div className='flex flex-col lg:flex-row min-h-[500px] sm:min-h-[550px] md:min-h-[600px] lg:min-h-[650px] xl:min-h-[700px]'>
-                    <div className="track-section pl-12 xl:w-1/2 mr-5 mb-5 xl:mb-0" >
+                <div className='flex flex-col lg:flex-row gap-6 lg:gap-10 min-h-[400px] sm:min-h-[450px] lg:min-h-[500px] xl:min-h-[550px]'>
+                    <div className="track-section flex-1 px-2 sm:px-4 md:px-8" >
                         {currentTrack ? (
                             <div className='track'>
                                 <h2 className='w-full text-2xl md:text-4xl xl:text-5xl 3xl:text-6xl my-4 md:my-12'>{currentTrack.title}</h2>
@@ -123,13 +123,13 @@ const Tracks = () => {
                             <p>Select a track to see more information.</p>
                         )}
                     </div>
-                    <div className="carousel flex items-center gap-2 sm:gap-5 h-fit self-end w-full">
+                    <div className="carousel flex items-center gap-2 sm:gap-5 h-fit self-end">
                         <img loading="lazy" src={left_key} alt="prev" className='flex-shrink-0 opacity-50 hover:opacity-100 active:opacity-100 cursor-pointer w-8 sm:w-auto' onClick={() => {
                             moveLeft();
                             let idx = trackData.findIndex(t => t.id === selectedTrack);
                             if (idx > 0) handleCardClick(trackData[idx - 1].id);
                         }} />
-                        <div className='tracks-wrapper flex items-center gap-3 sm:gap-5 flex-1 overflow-x-auto scroll-smooth no-scrollbar py-4 px-1 sm:px-2' id='slider'>
+                        <div className='tracks-wrapper flex items-center gap-3 sm:gap-5 max-w-[305px] sm:max-w-[460px] overflow-x-auto scroll-smooth no-scrollbar py-4 px-1 sm:px-2' id='slider'>
                             {trackData.filter(t => t.id !== undefined).map((track) => (
                                 <div key={track.id} className={`card min-w-24 sm:min-w-36 3xl:min-w-40 grid place-items-center relative cursor-pointer transition-all duration-300 ${selectedTrack === track.id ? 'scale-110 z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]' : 'scale-90 opacity-60 hover:scale-100 hover:opacity-90'}`} onClick={() => handleCardClick(track.id)}>
                                     <img loading="lazy" src={track.card} alt="" className={`transition-opacity duration-300 3xl:min-w-40 ${selectedTrack === track.id ? 'opacity-100' : 'opacity-80'}`} />
