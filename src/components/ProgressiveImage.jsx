@@ -1,56 +1,71 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 
 const ProgressiveImage = ({ src, placeholder, alt, style, ...props }) => {
-  const [loaded, setLoaded] = useState(false);
-  const imgRef = useRef(null);
+  const [displaySrc, setDisplaySrc] = useState(placeholder);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const containerRef = useRef(null);
+  const imgLoaderRef = useRef(null);
 
-  useEffect(() => {
-    // Reset loaded state when src changes
-    setLoaded(false);
+  const loadFullImage = useCallback(() => {
+    if (imgLoaderRef.current) return; // already loading
 
     const img = new Image();
+    imgLoaderRef.current = img;
+
+    img.onload = () => {
+      setDisplaySrc(src);
+      setIsLoaded(true);
+    };
+
+    img.onerror = () => {
+      // On error, still show full src (browser will show broken image)
+      setDisplaySrc(src);
+      setIsLoaded(true);
+    };
+
+    // Set src AFTER registering callbacks to avoid race condition
     img.src = src;
+  }, [src]);
 
-    // Fast path: image is fully cached and decoded
-    if (img.complete && img.naturalHeight > 0) {
-      setLoaded(true);
-      return;
-    }
+  useEffect(() => {
+    // Reset state when src changes
+    setDisplaySrc(placeholder);
+    setIsLoaded(false);
+    imgLoaderRef.current = null;
 
-    // Standard path: fetch image once the placeholder starts coming into view
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
-          img.onload = () => setLoaded(true);
+          loadFullImage();
           observer.disconnect();
         }
       },
-      { rootMargin: "300px" } // Load well before the image is fully in the viewport
+      { rootMargin: "400px 0px" } // start loading 400px before entering viewport
     );
 
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
+    const el = containerRef.current;
+    if (el) observer.observe(el);
 
     return () => {
       observer.disconnect();
-      img.onload = null;
+      if (imgLoaderRef.current) {
+        imgLoaderRef.current.onload = null;
+        imgLoaderRef.current.onerror = null;
+      }
     };
-  }, [src]);
+  }, [src, placeholder, loadFullImage]);
 
   return (
     <img
-      ref={imgRef}
-      src={loaded ? src : placeholder}
+      ref={containerRef}
+      src={displaySrc}
       alt={alt}
-      loading="lazy"
-      decoding="async"
       {...props}
       style={{
         ...style,
-        filter: loaded ? "none" : "blur(12px)",
-        transform: loaded ? "none" : "scale(1.05)",
-        transition: "filter 0.5s ease-out, transform 0.5s ease-out"
+        filter: isLoaded ? "none" : "blur(10px)",
+        transform: isLoaded ? "scale(1)" : "scale(1.03)",
+        transition: "filter 0.5s ease-out, transform 0.5s ease-out",
       }}
     />
   );
