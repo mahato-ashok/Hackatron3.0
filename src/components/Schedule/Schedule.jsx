@@ -109,7 +109,7 @@ function Schedule() {
                                     className="flex flex-col justify-center items-center min-w-[330px] 3xl:min-w-[660px] m-1"
                                 >
                                     <h1 className="text-[#FFC977] text-3xl md:text-4xl xl:text-4xl 3xl:text-6xl">
-                                        March 25
+                                        March 28
                                     </h1>
                                     <h2 className="text-[#00FFDF] text-1xl md:text-2xl xl:text-2xl 3xl:text-4xl">
                                         11:59 PM
